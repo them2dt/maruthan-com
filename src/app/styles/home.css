@@ -14,7 +14,7 @@
 .grid-item-text {
   font-family: "switzer-regular";
   font-size: 24px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0);
 
   position: relative;
   top: 20px;
@@ -59,15 +59,21 @@
 .grid-item-3-bubble,
 .grid-item-4-bubble,
 .grid-item-5-bubble {
-  border-radius: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: right;
+
+  border: none;
+  border-radius: 20px;
 
   background: linear-gradient(to right, black 50%, transparent 0);
   background-size: 200% 100%;
   background-position: right;
   animation: bubbleBlackOut 1s 1s forwards;
+
+  cursor: cell;
+
+  
 }
 .grid-item-1-bubble:hover,
 .grid-item-2-bubble:hover,
@@ -113,7 +119,7 @@
 }
 
 .title {
-  font-family: "switzer-regular";
+  font-family: "clash-semibold";
   font-size: 72px;
   color: white;
   position: relative;
@@ -124,9 +130,11 @@
 @keyframes bubbleBlackOut {
   0% {
     background-position: right;
+    pointer-events: none;
   }
   100% {
     background-position: left;
+    pointer-events: initial;
   }
 }
 @keyframes bubbleBlackIn {
@@ -135,16 +143,11 @@
   }
   100% {
     background-position: right;
-    animation-play-state: paused;
+    pointer-events: initial;
   }
 }
 @keyframes grid-text-white {
   100% {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-@keyframes grid-text-black {
-  100% {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
   }
 }

@@ -6,9 +6,11 @@
   font-family: "switzer-regular";
   src: url("./fonts/Switzer-Regular.otf");
 }
-
-
-
+@font-face {
+  font-family: "jb-regular";
+  src: url("./fonts/JetBrainsMono-Regular.ttf");
+}
+:root{}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -20,7 +22,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: "switzer-regular";
-  background-color: rgb(25, 30, 30);
+  background-color: rgb(255, 255, 255);
 }
 a {
   color: inherit;
