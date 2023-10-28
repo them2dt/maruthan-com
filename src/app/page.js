@@ -1,6 +1,13 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Home() {
-  const openSection = () => {
-    
+  const openSection = (id) => {
+    const item = document.getElementById("section-window");
+    item.style.backgroundColor = "var(--section-" + id + "-color)";
+
+    item.classList.add(["section-window-active"]);
   };
 
   return (
@@ -8,21 +15,41 @@ export default function Home() {
       <div className="intro">
         <div className="intro-grid">
           <div className="grid-item-1">
-            <button className="grid-item-1-bubble">
+            <button
+              className="grid-item-1-bubble"
+              onClick={() => {
+                openSection(0);
+              }}
+            >
               <div className="grid-item-text">about</div>
             </button>
           </div>
           <div className="grid-item-2">
-            <button className="grid-item-2-bubble">
+            <button
+              className="grid-item-2-bubble"
+              onClick={() => {
+                openSection(1);
+              }}
+            >
               <div className="grid-item-text">gallery</div>
             </button>
           </div>
           <div className="grid-item-3">
-            <button className="grid-item-3-bubble">
+            <button
+              className="grid-item-3-bubble"
+              onClick={() => {
+                openSection(2);
+              }}
+            >
               <div className="grid-item-text">services</div>
             </button>
           </div>
-          <div className="grid-item-4">
+          <div
+            className="grid-item-4"
+            onClick={() => {
+              openSection(3);
+            }}
+          >
             <button className="grid-item-4-bubble">
               <div className="grid-item-text">contact</div>
             </button>
@@ -33,6 +60,9 @@ export default function Home() {
             </button>
           </div>
         </div>
+      </div>
+      <div className="section-window-container" id="section-window-container">
+        <div className="section-window" id="section-window"></div>
       </div>
     </main>
   );

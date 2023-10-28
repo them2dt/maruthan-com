@@ -10,11 +10,17 @@
   font-family: "jb-regular";
   src: url("./fonts/JetBrainsMono-Regular.ttf");
 }
-:root{}
+:root {
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  --section-color: #000000;
+  --section-0-color:#16d2c0;
+  --section-1-color:#e44769;
+  --section-2-color:#e5c912;
+  --section-3-color:#3e00b2;
 }
 
 html,
