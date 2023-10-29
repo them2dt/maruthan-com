@@ -1,24 +1,24 @@
 .intro {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 25vw);
-    grid-template-rows: repeat(4, 25vh);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 25vw);
+  grid-template-rows: repeat(4, 25vh);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .grid-item-text {
-    font-family: "switzer-regular";
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0);
-    position: relative;
-    top: 20px;
-    right: 20px;
-    animation: grid-text-white 1s 2s forwards;
+  font-family: "switzer-regular";
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0);
+  position: relative;
+  top: 20px;
+  right: 20px;
+  animation: grid-text-white 1s 2s forwards;
 }
 
 .grid-item-1,
@@ -26,34 +26,34 @@
 .grid-item-3,
 .grid-item-4,
 .grid-item-5 {
-    display: flex;
-    align-items: flex-end;
-    justify-content: left;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
 }
 
 .grid-item-1 {
-    grid-area: 1 / 1 / 4 / 2;
-    justify-content: center;
+  grid-area: 1 / 1 / 4 / 2;
+  justify-content: center;
 }
 
 .grid-item-2 {
-    grid-area: 1 / 2 / 4 / 3;
+  grid-area: 1 / 2 / 4 / 3;
 }
 
 .grid-item-3 {
-    grid-area: 1 / 3 / 4 / 4;
+  grid-area: 1 / 3 / 4 / 4;
 }
 
 .grid-item-4 {
-    grid-area: 1 / 4 / 5 / 5;
-    align-items: center;
-    justify-content: left;
+  grid-area: 1 / 4 / 5 / 5;
+  align-items: center;
+  justify-content: left;
 }
 
 .grid-item-5 {
-    grid-area: 4 / 1 / 5 / 4;
-    align-items: center;
-    justify-content: center;
+  grid-area: 4 / 1 / 5 / 4;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-item-1-bubble,
@@ -61,146 +61,157 @@
 .grid-item-3-bubble,
 .grid-item-4-bubble,
 .grid-item-5-bubble {
-    display: flex;
-    align-items: flex-start;
-    justify-content: right;
-    border: none;
-    border-radius: 20px;
-    background: linear-gradient(to right, black 50%, transparent 0);
-    background-size: 200% 100%;
-    background-position: right;
-    animation: bubbleBlackOut 1s 1s forwards;
-    cursor: cell;
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #0a0a0a 50%, transparent 0);
+  background-size: 200% 100%;
+  background-position: right;
+  animation: bubbleBlackOut 1s 1s forwards;
+  cursor: cell;
 }
 
 .grid-item-1-bubble:hover,
 .grid-item-2-bubble:hover,
 .grid-item-3-bubble:hover,
 .grid-item-4-bubble:hover {
-    animation: bubbleBlackIn 0.1s backwards;
+  animation: bubbleBlackIn 0.1s backwards;
 }
 
 .grid-item-1-bubble,
 .grid-item-2-bubble,
 .grid-item-3-bubble,
 .grid-item-4-bubble {
-    height: calc(75vh - 10px);
+  height: calc(75vh - 10px);
 }
 
 .grid-item-2-bubble,
 .grid-item-3-bubble,
 .grid-item-4-bubble {
-    width: calc(25vw - 10px);
+  width: calc(25vw - 10px);
 }
 
 .grid-item-1-bubble {
-    width: calc(25vw - 20px);
-    background-color: var(--section-0-color);
+  width: calc(25vw - 20px);
+  background-color: var(--section-0-color);
 }
 
 .grid-item-2-bubble {
-    background-color: var(--section-1-color);
+  background-color: var(--section-1-color);
 }
 
 .grid-item-3-bubble {
-    background-color: var(--section-2-color);
+  background-color: var(--section-2-color);
 }
 
 .grid-item-4-bubble {
-    background-color: var(--section-3-color);
-    height: calc(100vh - 20px);
+  background-color: var(--section-3-color);
+  height: calc(100vh - 20px);
 }
 
 .grid-item-5-bubble {
-    width: calc(75vw - 20px);
-    height: calc(25vh - 20px);
-    background-color: rgb(147, 255, 31);
-    align-items: flex-end;
-    justify-content: left;
+  width: calc(75vw - 20px);
+  height: calc(25vh - 20px);
+  background-color: #161616;
+  align-items: flex-end;
+  justify-content: left;
 }
 
 .title {
-    font-family: "clash-semibold";
-    font-size: 72px;
-    color: white;
-    position: relative;
-    bottom: 20px;
-    left: 40px;
+  font-family: "clash-semibold";
+  font-size: 72px;
+  color: rgb(147, 255, 31);
+  position: relative;
+  bottom: 20px;
+  left: 40px;
 }
 
 .section-window-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
 }
 
 #section-window {
-    opacity: 0;
+  opacity: 0;
 }
 
 .section-window-active {
-    position: relative;
-    top: calc(100vh - 30px);
-    left: 10px;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    background-color: var(--section-color);
-    opacity: 0;
-    /* 
+  position: relative;
+  top: calc(100vh - 30px);
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--section-color);
+  opacity: 0;
+  /* 
   transition-timing-function: cubic-bezier(0, 0.45, 0.5, 1);*/
-    animation: showSection 1s forwards, moveSection 1s 1s forwards, expandSection 1s 2s forwards;
+  animation: showSection 1s forwards, moveSection 1s 1s forwards,
+    expandSection 1s 2s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 @keyframes bubbleBlackOut {
-    0% {
-        background-position: right;
-        pointer-events: none;
-    }
-    100% {
-        background-position: left;
-        pointer-events: initial;
-    }
+  0% {
+    background-position: right;
+    pointer-events: none;
+  }
+  100% {
+    background-position: left;
+    pointer-events: initial;
+  }
 }
 
 @keyframes bubbleBlackIn {
-    0% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-        pointer-events: initial;
-    }
+  0% {
+    background-position: left;
+    opacity: 1;
+  }
+  100% {
+    background-position: right;
+    pointer-events: initial;
+  }
 }
 
 @keyframes grid-text-white {
-    100% {
-        color: rgb(255, 255, 255);
-    }
+  100% {
+    color: rgb(30, 30, 30);
+  }
 }
 
 @keyframes showSection {
-    100% {
-        opacity: 100%;
-    }
+  100% {
+    opacity: 100%;
+  }
 }
 
 @keyframes moveSection {
-    100% {
-        top: 10px;
-        left: calc(100vw - 30px);
-    }
+  100% {
+    top: 10px;
+    left: calc(100vw - 30px);
+  }
 }
 
 @keyframes expandSection {
-    100% {
-        width: calc(100vw - 20px);
-        height: calc(100vh - 20px);
-        left: calc(10px);
-    }
+  100% {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 20px);
+    left: calc(10px);
+  }
 }
