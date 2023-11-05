@@ -10,8 +10,6 @@
   font-family: "jb-regular";
   src: url("./fonts/JetBrainsMono-Regular.ttf");
 }
-:root {
-}
 * {
   box-sizing: border-box;
   padding: 0;
