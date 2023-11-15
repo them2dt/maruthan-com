@@ -1,8 +1,30 @@
-.intro {
+.section-room {
+  position: relative;
+
   width: 100vw;
   height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
 }
 
+.section-room-text{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.section-room-title {
+  font-family: "clash-semibold";
+  font-size: 36px;
 
+  color: rgba(0, 0, 0, 0.6);
+}
+.section-room-description {
+  font-family: "switzer-regular";
+  font-size: 16px;
 
+  color: rgba(0, 0, 0, 0.4);
 
+}
