@@ -8,8 +8,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-
-import tag from "./media/m2dt-tag.png";
+import tag from "./media/tag-2.png";
 
 export default function Home() {
   return (
