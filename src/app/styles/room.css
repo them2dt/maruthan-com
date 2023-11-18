@@ -1,0 +1,40 @@
+.room-title {
+  font-family: "clash-semibold";
+  font-size: 36px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.room-description {
+  font-family: "switzer-regular";
+  font-size: 18px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.room-location {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  z-index: 2;
+
+  font-family: "switzer-regular";
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.room-tag {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 175px); 
+
+  width: 350px;
+  height: 200px;
+}

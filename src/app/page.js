@@ -1,6 +1,15 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationPin } from "@fortawesome/free-solid-svg-icons";
+import { faLocationPin, faX } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
+
+import tag from "./media/m2dt-tag.png";
 
 export default function Home() {
   return (
@@ -18,6 +27,7 @@ export default function Home() {
         <div className="room-location">
           <FontAwesomeIcon icon={faLocationPin} /> Zurich, Switzerland
         </div>
+        <Image className="room-tag" src={tag} />
         <div className="room-description">
           Web Developer <br />
           Web Designer <br />
@@ -101,6 +111,22 @@ export default function Home() {
                 <div className="blog-grid-item-button">dive in!</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="section socials">
+        <div className="socials-grid">
+          <div className="socials-grid-item">
+            <FontAwesomeIcon icon={faGithub} />
+          </div>
+          <div className="socials-grid-item">
+            <FontAwesomeIcon icon={faTwitter} />
+          </div>
+          <div className="socials-grid-item">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </div>
+          <div className="socials-grid-item">
+            <FontAwesomeIcon icon={faInstagram} />
           </div>
         </div>
       </div>

@@ -1,5 +1,8 @@
 import './styles/globals.css'
-import './styles/home.css'
+import './styles/room.css'
+import './styles/projects.css'
+import './styles/blog.css'
+import './styles/socials.css'
 
 export const metadata = {
   title: 'MARUTHAN.COM',

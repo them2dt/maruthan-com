@@ -1,0 +1,28 @@
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.socials-grid-item {
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.socials-grid-item:hover {
+  color: white;
+  transition-duration: 0.2s;
+}
+
+.socials-grid-item:not(:hover) {
+  transition-duration: 0.2s;
+}
