@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import tag from "./media/tag-2.png";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -22,35 +23,185 @@ export default function Home() {
       </div>
 
       <div className="section room" id="home">
-        <div className="room-title">Maruthan Thanabalasingam</div>
-        <div className="room-location">
+        <motion.div
+          className="room-title"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+          }}
+          viewport={{ once: false }}
+        >
+          Maruthan Thanabalasingam
+        </motion.div>
+        <motion.div
+          className="room-location"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+          }}
+          viewport={{ once: false }}
+        >
           <FontAwesomeIcon icon={faLocationPin} /> Zurich, Switzerland
-        </div>
-        <Image className="room-tag" src={tag} />
-        <div className="room-description">
+        </motion.div>
+
+        <motion.div
+          className="room-description"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.2,
+            delay: 0.5,
+          }}
+          viewport={{ once: false }}
+        >
           Web Developer <br />
           Web Designer <br />
           Version 2023
-        </div>
+        </motion.div>
+        <motion.div className="room-tag-container">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 0.5, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.5,
+            }}
+            viewport={{ once: false }}
+          >
+            <Image className="room-tag" src={tag} />
+          </motion.div>
+        </motion.div>
       </div>
       <div className="section projects">
         <div className="projects-grid">
-          <div className="projects-grid-item project-grid-item-1"></div>
-          <div className="projects-grid-item project-grid-item-2"></div>
-          <div className="projects-grid-item project-grid-item-3"></div>
-          <div className="projects-grid-item project-grid-item-4"></div>
-          <div className="projects-grid-item project-grid-item-5"></div>
-          <div className="projects-grid-item project-grid-item-6"></div>
-          <div className="projects-grid-item project-grid-item-7"></div>
-          <div className="projects-grid-item project-grid-item-8"></div>
-          <div className="projects-grid-item project-grid-item-9"></div>
-          <div className="projects-grid-item project-grid-item-10"></div>
+          <motion.div
+            className="projects-grid-item project-grid-item-1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-2"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.1,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-3"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.2,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.3,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-5"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.4,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.5,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-7"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.6,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-8"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.7,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-9"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.8,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
+          <motion.div
+            className="projects-grid-item project-grid-item-10"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.9,
+            }}
+            viewport={{ once: false }}
+          ></motion.div>
         </div>
       </div>
       <div className="section blog">
-        <div className="blog-grid-box">
+        <motion.div
+          className="blog-grid-box"
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.4,
+            delay: 0.4,
+          }}
+          viewport={{ once: false }}
+        >
           <div className="blog-grid">
-            <div className="blog-grid-item">
+            <motion.div
+              className="blog-grid-item"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.2,
+              }}
+              viewport={{ once: false }}
+            >
               <div className="blog-grid-item-type">Blog</div>
               <div className="blog-grid-item-cover"></div>
               <div className="blog-grid-item-info">
@@ -64,8 +215,17 @@ export default function Home() {
                 </div>
                 <div className="blog-grid-item-button">dive in!</div>
               </div>
-            </div>
-            <div className="blog-grid-item">
+            </motion.div>
+            <motion.div
+              className="blog-grid-item"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.2,
+              }}
+              viewport={{ once: false }}
+            >
               <div className="blog-grid-item-type">Blog</div>
               <div className="blog-grid-item-cover"></div>
               <div className="blog-grid-item-info">
@@ -79,8 +239,17 @@ export default function Home() {
                 </div>
                 <div className="blog-grid-item-button">dive in!</div>
               </div>
-            </div>
-            <div className="blog-grid-item">
+            </motion.div>
+            <motion.div
+              className="blog-grid-item"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.2,
+              }}
+              viewport={{ once: false }}
+            >
               <div className="blog-grid-item-type">Blog</div>
               <div className="blog-grid-item-cover"></div>
               <div className="blog-grid-item-info">
@@ -94,8 +263,17 @@ export default function Home() {
                 </div>
                 <div className="blog-grid-item-button">dive in!</div>
               </div>
-            </div>
-            <div className="blog-grid-item">
+            </motion.div>
+            <motion.div
+              className="blog-grid-item"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.2,
+              }}
+              viewport={{ once: false }}
+            >
               <div className="blog-grid-item-type">Blog</div>
               <div className="blog-grid-item-cover"></div>
               <div className="blog-grid-item-info">
@@ -109,9 +287,9 @@ export default function Home() {
                 </div>
                 <div className="blog-grid-item-button">dive in!</div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="section socials">
         <div className="socials-grid">

@@ -30,11 +30,25 @@
   color: rgba(255, 255, 255, 0.25);
 }
 
-.room-tag {
+.room-tag-container {
   position: absolute;
-  top: calc(50% - 100px);
-  left: calc(50% - 175px); 
+  top: 0;
+  left: 0;
 
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+}
+.room-tag {
+  position: relative;
   width: 350px;
   height: 200px;
 }
