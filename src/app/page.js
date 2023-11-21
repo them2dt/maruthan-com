@@ -58,9 +58,11 @@ export default function Home() {
           }}
           viewport={{ once: false }}
         >
-          Web Developer <br />
-          Web Designer <br />
-          Version 2023
+          <div className="room-description-mobile-box">
+            Web Developer <br />
+            Web Designer <br />
+            Version 2023
+          </div>
         </motion.div>
         <motion.div className="room-tag-container">
           <motion.div
@@ -77,113 +79,115 @@ export default function Home() {
         </motion.div>
       </div>
       <div className="section projects">
-        <div className="projects-grid">
-          <motion.div
-            className="projects-grid-item project-grid-item-1"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-2"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.1,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-3"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.2,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-4"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.3,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-5"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.4,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-6"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.5,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-7"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.6,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-8"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.7,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-9"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.8,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
-          <motion.div
-            className="projects-grid-item project-grid-item-10"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.9,
-            }}
-            viewport={{ once: false }}
-          ></motion.div>
+        <div className="projects-grid-box">
+          <div className="projects-grid">
+            <motion.div
+              className="projects-grid-item project-grid-item-1"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-2"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.1,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.2,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-4"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.3,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-5"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.4,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.5,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-7"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.6,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-8"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.7,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-9"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.8,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+            <motion.div
+              className="projects-grid-item project-grid-item-10"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.9,
+              }}
+              viewport={{ once: false }}
+            ></motion.div>
+          </div>
         </div>
       </div>
       <div className="section blog">
         <motion.div
           className="blog-grid-box"
-          initial={{ opacity: 0}}
+          initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
             duration: 0.4,

@@ -61,24 +61,45 @@ body {
 
   z-index: 1;
 }
+@media only screen and (min-width: 768px) {
+  .navbar {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
 
-.navbar {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
+    z-index: 2;
 
-  z-index: 2;
+    width: 280px;
+    height: 100px;
 
-  width: 280px;
-  height: 100px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
 
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    bottom: 40px;
+    left: calc(50vw - 140px);
 
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+    z-index: 2;
+
+    width: 280px;
+    height: 100px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
 
 .navbar-item {
