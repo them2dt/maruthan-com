@@ -1,25 +1,55 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationPin, faX } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faLocationPin, faX } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faInstagram,
   faLinkedin,
+  faReact,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 import Image from "next/image";
 import tag from "./media/tag-2.png";
-import { motion } from "framer-motion";
+//logos
+import logo_react from "./media/logos/react.svg";
+import Link from "next/link";
 
 export default function Home() {
+  const navigate = () => {
+    console.log(window.location.href);
+    window.location.href = "/#projects";
+  };
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <main>
       <div className="ambiente"></div>
-
-      <div className="navbar">
-        <div className="navbar-item">projects</div>
-        <div className="navbar-item">articles</div>
-        <div className="navbar-item">contact</div>
+      <motion.div className="navbar-loader-container">
+        <motion.div
+          className="navbar-loader"
+          style={{ scaleX, borderRadius: 80 }}
+        ></motion.div>
+      </motion.div>
+      <div className="navbar-box">
+        <div className="navbar">
+          <motion.div className="navbar-item selected" onClick={navigate}>
+            portfolio
+          </motion.div>
+          <div className="navbar-item">blog</div>
+          <div className="navbar-item">contact</div>
+        </div>
+        <div className="navbar-theme-selector">
+          <div className="navbar-theme-selector-color"></div>
+        </div>
       </div>
 
       <div className="section room" id="home">
@@ -28,24 +58,24 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            duration: 0.8,
-            delay: 0.5,
+            duration: 0.2,
+            delay: 1,
           }}
           viewport={{ once: false }}
         >
-          Maruthan Thanabalasingam
+          Maruthan
         </motion.div>
         <motion.div
           className="room-location"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
-            duration: 0.8,
-            delay: 0.5,
+            duration: 0.2,
+            delay: 1,
           }}
           viewport={{ once: false }}
         >
-          <FontAwesomeIcon icon={faLocationPin} /> Zurich, Switzerland
+          47°23'09.8"N 8°32'01.2"E
         </motion.div>
 
         <motion.div
@@ -59,10 +89,22 @@ export default function Home() {
           viewport={{ once: false }}
         >
           <div className="room-description-mobile-box">
+            UI Designer <br />
             Web Developer <br />
-            Web Designer <br />
-            Version 2023
+            Blockchain Developer
           </div>
+        </motion.div>
+        <motion.div
+          className="room-version"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.2,
+            delay: 1,
+          }}
+          viewport={{ once: false }}
+        >
+          Version 2023
         </motion.div>
         <motion.div className="room-tag-container">
           <motion.div
@@ -70,230 +112,95 @@ export default function Home() {
             whileInView={{ opacity: 0.5, scale: 1 }}
             transition={{
               duration: 0.2,
-              delay: 0.5,
+              delay: 1,
             }}
             viewport={{ once: false }}
           >
-            <Image className="room-tag" src={tag} />
+            <Image className="room-tag" alt="tag" src={tag} />
           </motion.div>
         </motion.div>
       </div>
-      <div className="section projects">
-        <div className="projects-grid-box">
+
+      <div className="section projects" id="projects">
+        <div className="projects-container">
+          <div className="projects-title">Selected Projects</div>
           <div className="projects-grid">
-            <motion.div
-              className="projects-grid-item project-grid-item-1"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-2"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.1,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-3"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.2,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-4"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.3,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-5"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.4,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.5,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-7"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.6,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-8"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.7,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-9"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.8,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
-            <motion.div
-              className="projects-grid-item project-grid-item-10"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.9,
-              }}
-              viewport={{ once: false }}
-            ></motion.div>
+            <div className="project">
+              <div className="project-details">
+                <div className="project-title">DistriDoc</div>
+                <div className="project-description">
+                  Write documents and store them as NFT's. Cheap & persistent.
+                </div>
+              </div>
+              <div className="project-links">
+                <Link href={"https://distridoc.emptea.xyz"} target="_blank">
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+                <Link href={"https://github.com/them2dt"} target="_blank">
+                  <FontAwesomeIcon icon={faGithub} />
+                </Link>
+              </div>
+            </div>
+            <div className="project">
+              <div className="project-details">
+                <div className="project-title">CrowdSwift</div>
+                <div className="project-description">
+                  Create crowdfunding campaigns.
+                </div>
+              </div>
+              <div className="project-links">
+                <Link href={"https://distridoc.emptea.xyz"} target="_blank">
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+                <Link href={"https://github.com/them2dt"} target="_blank">
+                  <FontAwesomeIcon icon={faGithub} />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="section blog">
-        <motion.div
-          className="blog-grid-box"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.4,
-            delay: 0.4,
-          }}
-          viewport={{ once: false }}
-        >
-          <div className="blog-grid">
-            <motion.div
-              className="blog-grid-item"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.2,
-              }}
-              viewport={{ once: false }}
-            >
-              <div className="blog-grid-item-type">Blog</div>
-              <div className="blog-grid-item-cover"></div>
-              <div className="blog-grid-item-info">
-                <div className="blog-grid-item-text">
-                  <div className="blog-grid-item-title">
-                    Writing a solana program
+        <div className="blog-title">Articles</div>
+        <div className="blog-grid-box-flexer">
+          <motion.div
+            className="blog-grid-box"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.5,
+            }}
+            viewport={{ once: false }}
+          >
+            <div className="blog-grid">
+              <motion.div
+                className="blog-grid-item"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.2,
+                  delay: 0.5,
+                }}
+                viewport={{ once: false }}
+              >
+                <div className="blog-grid-item-type">Blog</div>
+                <div className="blog-grid-item-cover"></div>
+                <div className="blog-grid-item-info">
+                  <div className="blog-grid-item-text">
+                    <div className="blog-grid-item-title">
+                      Writing a solana program
+                    </div>
+                    <div className="blog-grid-item-description">
+                      In this step i'll build a solana program step-by-step.
+                    </div>
                   </div>
-                  <div className="blog-grid-item-description">
-                    In this step i'll build a solana program step-by-step.
-                  </div>
+                  <div className="blog-grid-item-button">dive in!</div>
                 </div>
-                <div className="blog-grid-item-button">dive in!</div>
-              </div>
-            </motion.div>
-            <motion.div
-              className="blog-grid-item"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.2,
-              }}
-              viewport={{ once: false }}
-            >
-              <div className="blog-grid-item-type">Blog</div>
-              <div className="blog-grid-item-cover"></div>
-              <div className="blog-grid-item-info">
-                <div className="blog-grid-item-text">
-                  <div className="blog-grid-item-title">
-                    Writing a solana program
-                  </div>
-                  <div className="blog-grid-item-description">
-                    In this step i'll build a solana program step-by-step.
-                  </div>
-                </div>
-                <div className="blog-grid-item-button">dive in!</div>
-              </div>
-            </motion.div>
-            <motion.div
-              className="blog-grid-item"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.2,
-              }}
-              viewport={{ once: false }}
-            >
-              <div className="blog-grid-item-type">Blog</div>
-              <div className="blog-grid-item-cover"></div>
-              <div className="blog-grid-item-info">
-                <div className="blog-grid-item-text">
-                  <div className="blog-grid-item-title">
-                    Writing a solana program
-                  </div>
-                  <div className="blog-grid-item-description">
-                    In this step i'll build a solana program step-by-step.
-                  </div>
-                </div>
-                <div className="blog-grid-item-button">dive in!</div>
-              </div>
-            </motion.div>
-            <motion.div
-              className="blog-grid-item"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.2,
-              }}
-              viewport={{ once: false }}
-            >
-              <div className="blog-grid-item-type">Blog</div>
-              <div className="blog-grid-item-cover"></div>
-              <div className="blog-grid-item-info">
-                <div className="blog-grid-item-text">
-                  <div className="blog-grid-item-title">
-                    Writing a solana program
-                  </div>
-                  <div className="blog-grid-item-description">
-                    In this step i'll build a solana program step-by-step.
-                  </div>
-                </div>
-                <div className="blog-grid-item-button">dive in!</div>
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </div>
       <div className="section socials">
         <div className="socials-grid">
