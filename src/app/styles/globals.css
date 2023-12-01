@@ -171,10 +171,21 @@ body {
 
   color: rgba(0, 0, 0, 0.5);
 
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 34%, rgb(163, 33, 33) 65%)
+    right;
+  background-size: 300%;
+  transition: 1s ease-out;
+
   cursor: pointer;
 }
 
 .navbar-item.selected {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center;
+
   color: #ffffff;
+}
+.navbar-item.fade-out {
+  background-position: left;
+
+  color: #ff0000;
 }

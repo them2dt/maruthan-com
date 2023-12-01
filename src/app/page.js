@@ -18,9 +18,44 @@ import logo_react from "./media/logos/react.svg";
 import Link from "next/link";
 
 export default function Home() {
-  const navigate = () => {
+  const navigate = ({ id }) => {
     console.log(window.location.href);
-    window.location.href = "/#projects";
+    window.location.href = "/#" + id;
+
+    if (id == "home") {
+    } else if (id == "projects") {
+      document.getElementById("navigator-projects").classList.add("selected");
+      document.getElementById("navigator-projects").classList.remove("fade-out");
+
+      document.getElementById("navigator-blog").classList.remove("selected");
+      document.getElementById("navigator-blog").classList.remove("fade-out");
+
+      document.getElementById("navigator-contact").classList.remove("selected");
+      document.getElementById("navigator-contact").classList.remove("fade-out");
+
+    } else if (id == "blog") {
+      document.getElementById("navigator-projects").classList.add("fade-out");
+      document.getElementById("navigator-projects").classList.remove("selected");
+
+      document.getElementById("navigator-blog").classList.add("selected");
+      document.getElementById("navigator-blog").classList.remove("fade-out");
+
+      
+      document.getElementById("navigator-contact").classList.remove("selected");
+      document.getElementById("navigator-contact").classList.remove("fade-out");
+    } else if (id == "contact") {
+      
+      document.getElementById("navigator-projects").classList.add("fade-out");
+      document.getElementById("navigator-projects").classList.remove("selected");
+
+      document.getElementById("navigator-blog").classList.add("fade-out");
+      document.getElementById("navigator-blog").classList.remove("selected");
+
+      
+      document.getElementById("navigator-contact").classList.add("selected");
+      document.getElementById("navigator-contact").classList.remove("fade-out");
+    } else if (id == "contact") {
+    }
   };
 
   const { scrollYProgress } = useScroll();
@@ -41,11 +76,27 @@ export default function Home() {
       </motion.div>
       <div className="navbar-box">
         <div className="navbar">
-          <motion.div className="navbar-item selected" onClick={navigate}>
+          <motion.div
+            className="navbar-item"
+            id="navigator-projects"
+            onClick={() => navigate({ id: "projects" })}
+          >
             portfolio
           </motion.div>
-          <div className="navbar-item">blog</div>
-          <div className="navbar-item">contact</div>
+          <motion.div
+            className="navbar-item"
+            id="navigator-blog"
+            onClick={() => navigate({ id: "blog" })}
+          >
+            blog
+          </motion.div>
+          <motion.div
+            className="navbar-item"
+            id="navigator-contact"
+            onClick={() => navigate({ id: "contact" })}
+          >
+            contact
+          </motion.div>
         </div>
         <div className="navbar-theme-selector">
           <div className="navbar-theme-selector-color"></div>
@@ -120,7 +171,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </div>
-
       <div className="section projects" id="projects">
         <div className="projects-container">
           <div className="projects-title">Selected Projects</div>
@@ -160,49 +210,51 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="section blog">
-        <div className="blog-title">Articles</div>
-        <div className="blog-grid-box-flexer">
-          <motion.div
-            className="blog-grid-box"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 0.5,
-            }}
-            viewport={{ once: false }}
-          >
-            <div className="blog-grid">
-              <motion.div
-                className="blog-grid-item"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.2,
-                  delay: 0.5,
-                }}
-                viewport={{ once: false }}
-              >
-                <div className="blog-grid-item-type">Blog</div>
-                <div className="blog-grid-item-cover"></div>
-                <div className="blog-grid-item-info">
-                  <div className="blog-grid-item-text">
-                    <div className="blog-grid-item-title">
-                      Writing a solana program
+      <div className="section blog" id="blog">
+        <div className="blog-content">
+          <div className="blog-title">Articles</div>
+          <div className="blog-grid-box-flexer">
+            <motion.div
+              className="blog-grid-box"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.5,
+              }}
+              viewport={{ once: false }}
+            >
+              <div className="blog-grid">
+                <motion.div
+                  className="blog-grid-item"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.2,
+                    delay: 0.5,
+                  }}
+                  viewport={{ once: false }}
+                >
+                  <div className="blog-grid-item-type">Blog</div>
+                  <div className="blog-grid-item-cover"></div>
+                  <div className="blog-grid-item-info">
+                    <div className="blog-grid-item-text">
+                      <div className="blog-grid-item-title">
+                        Writing a solana program
+                      </div>
+                      <div className="blog-grid-item-description">
+                        In this step i'll build a solana program step-by-step.
+                      </div>
                     </div>
-                    <div className="blog-grid-item-description">
-                      In this step i'll build a solana program step-by-step.
-                    </div>
+                    <div className="blog-grid-item-button">dive in!</div>
                   </div>
-                  <div className="blog-grid-item-button">dive in!</div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
-      <div className="section socials">
+      <div className="section socials" id="contact">
         <div className="socials-grid">
           <div className="socials-grid-item">
             <FontAwesomeIcon icon={faGithub} />

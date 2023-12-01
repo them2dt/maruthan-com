@@ -1,4 +1,7 @@
 @media only screen and (min-width: 768px) {
+  .blog{
+    height: 100vh;
+  }
   .blog-grid-box-flexer {
     display: flex;
     align-items: center;
