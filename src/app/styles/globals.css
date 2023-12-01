@@ -117,7 +117,7 @@ body {
   width: 470px;
   height: 80px;
 
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 80px;
 }
 .navbar {
@@ -128,7 +128,7 @@ body {
   width: 470px;
   height: 80px;
 
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-radius: 80px;
@@ -171,10 +171,10 @@ body {
 
   color: rgba(0, 0, 0, 0.5);
 
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 34%, rgb(163, 33, 33) 65%)
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 34%, rgb(92, 42, 20) 64%)
     right;
   background-size: 300%;
-  transition: 1s ease-out;
+  transition: 0.1s linear;
 
   cursor: pointer;
 }
@@ -187,5 +187,5 @@ body {
 .navbar-item.fade-out {
   background-position: left;
 
-  color: #ff0000;
+  color: rgb(41, 19, 9);
 }
