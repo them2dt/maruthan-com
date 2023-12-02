@@ -1,0 +1,101 @@
+.ambiente {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  z-index: 0;
+
+  opacity: 0;
+}
+
+.ambiente.active {
+  opacity: 1;
+  transition: 0.5s ease-out;
+}
+
+.ambiente.barista {
+  background: var(--ambiente);
+  transition: 0.5s ease-out;
+}
+.ambiente.marine {
+  background: var(--marine);
+  transition: 0.5s ease-out;
+}
+.ambiente.grenada {
+  background: var(--grenada);
+  transition: 0.5s ease-out;
+}
+.ambiente.mentan {
+  background: var(--mentan);
+  transition: 0.5s ease-out;
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  z-index: 1;
+}
+
+.theme-selector {
+  margin-left: 10px;
+
+  cursor: pointer;
+}
+
+.theme-selector-value.activator {
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-selector-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+
+  margin-bottom: 20px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 80px;
+  cursor: pointer;
+}
+
+.theme-selector-color {
+  width: 60px;
+  height: 60px;
+  border-radius: 80px;
+
+  background: var(--ambiente);
+}
+
+.theme-selector-color.barista {
+  background: var(--ambiente);
+}
+.theme-selector-color.marine {
+  background: radial-gradient(rgb(19, 87, 233), rgb(2, 21, 63));
+}
+.theme-selector-color.grenada {
+  background: radial-gradient(rgb(25, 175, 105), rgb(6, 82, 47));
+}
+.theme-selector-color.mentan {
+  background: radial-gradient(rgb(194, 243, 255), rgb(127, 174, 185));
+}
+
+.theme-selector-color.activator {
+  background:rgba(0, 0, 0, 0.5);
+}

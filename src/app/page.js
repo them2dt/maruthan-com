@@ -19,7 +19,11 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 export default function Home() {
   return (
     <main>
-      <div className="ambiente"></div>
+      <div className="ambiente mentan" id="ambiente-mentan"></div>
+      <div className="ambiente grenada" id="ambiente-grenada"></div>
+      <div className="ambiente marine" id="ambiente-marine"></div>
+      <div className="ambiente barista active" id="ambiente-barista"></div>
+
       <Navbar />
       <div className="section room" id="home">
         <motion.div

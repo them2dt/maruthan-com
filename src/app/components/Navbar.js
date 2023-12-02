@@ -33,6 +33,30 @@ export default function Navbar() {
       document.getElementById("navigator-blog").classList.remove("selected");
     }
   };
+
+  const setAmbiente = ({ theme }) => {
+    if (theme == "marine") {
+      document.getElementById("ambiente-marine").classList.add("active");
+      document.getElementById("ambiente-mentan").classList.remove("active");
+      document.getElementById("ambiente-grenada").classList.remove("active");
+      document.getElementById("ambiente-barista").classList.remove("active");
+    } else if (theme == "mentan") {
+      document.getElementById("ambiente-marine").classList.remove("active");
+      document.getElementById("ambiente-mentan").classList.add("active");
+      document.getElementById("ambiente-grenada").classList.remove("active");
+      document.getElementById("ambiente-barista").classList.remove("active");
+    } else if (theme == "grenada") {
+      document.getElementById("ambiente-marine").classList.remove("active");
+      document.getElementById("ambiente-mentan").classList.remove("active");
+      document.getElementById("ambiente-grenada").classList.add("active");
+      document.getElementById("ambiente-barista").classList.remove("active");
+    } else if (theme == "barista") {
+      document.getElementById("ambiente-marine").classList.remove("active");
+      document.getElementById("ambiente-mentan").classList.remove("active");
+      document.getElementById("ambiente-grenada").classList.remove("active");
+      document.getElementById("ambiente-barista").classList.add("active");
+    }
+  };
   return (
     <motion.div>
       <motion.div className="navbar-loader-container">
@@ -74,7 +98,8 @@ export default function Navbar() {
           </motion.div>
         </motion.div>
         <motion.div
-          className="navbar-theme-selector"
+          className="theme-selector"
+          id="theme-selector"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -82,7 +107,36 @@ export default function Navbar() {
             delay: 1,
           }}
         >
-          <motion.div className="navbar-theme-selector-color"></motion.div>
+          <motion.div
+            className="theme-selector-value"
+            onClick={() => setAmbiente({ theme: "mentan" })}
+          >
+            <motion.div className="theme-selector-color mentan"></motion.div>
+          </motion.div>
+          <motion.div
+            className="theme-selector-value"
+            onClick={() => setAmbiente({ theme: "grenada" })}
+          >
+            <motion.div className="theme-selector-color grenada"></motion.div>
+          </motion.div>
+          <motion.div
+            className="theme-selector-value"
+            onClick={() => setAmbiente({ theme: "marine" })}
+          >
+            <motion.div className="theme-selector-color marine"></motion.div>
+          </motion.div>
+          <motion.div
+            className="theme-selector-value"
+            onClick={() => setAmbiente({ theme: "barista" })}
+          >
+            <motion.div className="theme-selector-color barista"></motion.div>
+          </motion.div>
+          <motion.div
+            className="theme-selector-value activator"
+            onClick={() => setAmbiente({ theme: "barista" })}
+          >
+            <motion.div className="theme-selector-color activator"></motion.div>
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>
