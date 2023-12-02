@@ -171,27 +171,18 @@ body {
 
   color: rgba(0, 0, 0, 0.5);
 
-  background: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0) 34%,
-      rgba(0, 0, 0, 0.2) 64%
-    )
-    right;
-  background-size: 300%;
-  transition: 0.1s linear;
-
   cursor: pointer;
+
+  transition: 0.2s ease-out;
+
 }
 
 .navbar-item.selected {
-  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transition: 0.2s ease-out;
 
   color: #ffffff;
-}
-.navbar-item.fade-out {
-  background-position: left;
-
-  color: rgb(41, 19, 9);
 }
 
 #navigator-projects {

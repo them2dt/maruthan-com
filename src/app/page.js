@@ -23,83 +23,25 @@ export default function Home() {
     const previousId = previousAnchor[previousAnchor.length - 1];
     console.log("Previous ID: " + previousId);
     window.location.href = "/#" + id;
-    setTimeout(() => {
+
       if (id == "projects") {
-        console.log(previousId == "contact");
-        if (previousId == "contact") {
-          document.getElementById("navigator-contact").classList.remove("selected");
-          document.getElementById("navigator-contact").classList.remove("fade-out");
-          setTimeout(() => {
-            document.getElementById("navigator-blog").classList.remove("selected");
-            document.getElementById("navigator-blog").classList.remove("fade-out");
-            setTimeout(() => {
-              document.getElementById("navigator-projects").classList.remove("fade-out");
-              document.getElementById("navigator-projects").classList.add("selected");
-            }, 100);
-          }, 100);
-        } else if(previousId=="blog"){
-          document.getElementById("navigator-contact").classList.remove("selected");
-          document.getElementById("navigator-contact").classList.remove("fade-out");
-
-          document.getElementById("navigator-blog").classList.remove("selected");
-          document.getElementById("navigator-blog").classList.remove("fade-out");
-          setTimeout(() => {
-            setTimeout(() => {
-              document.getElementById("navigator-projects").classList.remove("fade-out");
-              document.getElementById("navigator-projects").classList.add("selected");
-            }, 100);
-          }, 100);
-        }else{
-          document.getElementById("navigator-projects").classList.remove("fade-out");
+      
           document.getElementById("navigator-projects").classList.add("selected");
-          
           document.getElementById("navigator-blog").classList.remove("selected");
-          document.getElementById("navigator-blog").classList.remove("fade-out");
-
           document.getElementById("navigator-contact").classList.remove("selected");
-          document.getElementById("navigator-contact").classList.remove("fade-out");
-        }
+       
       } else if (id == "blog") {
 
-          document.getElementById("navigator-projects").classList.add("fade-out");
           document.getElementById("navigator-projects").classList.remove("selected");
-
-          setTimeout(()=>{
-            document.getElementById("navigator-blog").classList.add("selected");
-            document.getElementById("navigator-blog").classList.remove("fade-out");
-          },100);
-
+          document.getElementById("navigator-blog").classList.add("selected");
           document.getElementById("navigator-contact").classList.remove("selected");
-          document.getElementById("navigator-contact").classList.remove("fade-out");
 
       } else if (id == "contact") {
-        if (previousId == "projects") {
           document.getElementById("navigator-projects").classList.remove("selected");
-          document.getElementById("navigator-projects").classList.add("fade-out");
-          setTimeout(() => {
-            document.getElementById("navigator-blog").classList.add("selected");
-            document.getElementById("navigator-blog").classList.add("fade-out");
-            setTimeout(() => {
-              document.getElementById("navigator-contact").classList.remove("fade-out");
-              document.getElementById("navigator-contact").classList.add("selected");
-            }, 100);
-          }, 100);
-        } else{
-          document.getElementById("navigator-projects").classList.add("fade-out");
-          document.getElementById("navigator-projects").classList.remove("selected");
-          setTimeout(()=>{
-            document.getElementById("navigator-contact").classList.add("selected");
-            document.getElementById("navigator-contact").classList.remove("fade-out");
-          },100);
-          document.getElementById("navigator-blog").classList.add("fade-out");
+          document.getElementById("navigator-contact").classList.add("selected");
           document.getElementById("navigator-blog").classList.remove("selected");
-  
-
-        }
-
-
       }
-    }, 100);
+
   };
 
   const { scrollYProgress } = useScroll();
