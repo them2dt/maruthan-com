@@ -1,94 +1,26 @@
+//use client-side-rendering
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faLocationPin, faX } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faReact,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
-
-import Image from "next/image";
-import tag from "./media/tag-2.png";
-//logos
-import logo_react from "./media/logos/react.svg";
+//next
 import Link from "next/link";
+import Image from "next/image";
+//local components
+import tag from "./media/tag-2.png";
+import Navbar from "./components/Navbar";
+//framer
+import { motion } from "framer-motion";
+//fontawesome
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
-  const navigate = ({ id }) => {
-    const previousAnchor = window.location.href.split("/#");
-    const previousId = previousAnchor[previousAnchor.length - 1];
-    console.log("Previous ID: " + previousId);
-    window.location.href = "/#" + id;
-
-      if (id == "projects") {
-      
-          document.getElementById("navigator-projects").classList.add("selected");
-          document.getElementById("navigator-blog").classList.remove("selected");
-          document.getElementById("navigator-contact").classList.remove("selected");
-       
-      } else if (id == "blog") {
-
-          document.getElementById("navigator-projects").classList.remove("selected");
-          document.getElementById("navigator-blog").classList.add("selected");
-          document.getElementById("navigator-contact").classList.remove("selected");
-
-      } else if (id == "contact") {
-          document.getElementById("navigator-projects").classList.remove("selected");
-          document.getElementById("navigator-contact").classList.add("selected");
-          document.getElementById("navigator-blog").classList.remove("selected");
-      }
-
-  };
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   return (
     <main>
       <div className="ambiente"></div>
-      <motion.div className="navbar-loader-container">
-        <motion.div
-          className="navbar-loader"
-          style={{ scaleX, borderRadius: 80 }}
-        ></motion.div>
-      </motion.div>
-      <div className="navbar-box">
-        <div className="navbar">
-          <motion.div
-            className="navbar-item"
-            id="navigator-projects"
-            onClick={() => navigate({ id: "projects" })}
-          >
-            portfolio
-          </motion.div>
-          <motion.div
-            className="navbar-item"
-            id="navigator-blog"
-            onClick={() => navigate({ id: "blog" })}
-          >
-            blog
-          </motion.div>
-          <motion.div
-            className="navbar-item"
-            id="navigator-contact"
-            onClick={() => navigate({ id: "contact" })}
-          >
-            contact
-          </motion.div>
-        </div>
-        <div className="navbar-theme-selector">
-          <div className="navbar-theme-selector-color"></div>
-        </div>
-      </div>
-
+      <Navbar />
       <div className="section room" id="home">
         <motion.div
           className="room-title"
