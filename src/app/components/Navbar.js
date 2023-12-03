@@ -1,5 +1,7 @@
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaintBrush, faPalette } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const { scrollYProgress } = useScroll();
@@ -135,7 +137,9 @@ export default function Navbar() {
             className="theme-selector-value activator"
             onClick={() => setAmbiente({ theme: "barista" })}
           >
-            <motion.div className="theme-selector-color activator"></motion.div>
+            <motion.div className="theme-selector-color activator">
+              <FontAwesomeIcon icon={faPalette}/>
+            </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>
