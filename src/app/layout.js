@@ -7,8 +7,8 @@ import "./styles/blog.css";
 import "./styles/socials.css";
 
 export const metadata = {
-  title: "MARUTHAN.COM",
-  description: "WEB DEVELOPEMENT & WEB DESIGN.",
+  title: "maruthan.com",
+  description: "Develop, design, create.",
 };
 
 export default function RootLayout({ children }) {

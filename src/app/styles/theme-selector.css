@@ -9,9 +9,11 @@
   margin: 0;
   padding: 0;
 
-  z-index: 0;
+  z-index: -1;
 
   opacity: 0;
+
+  pointer-events: none;
 }
 
 .ambiente.active {
@@ -23,14 +25,17 @@
   background: var(--ambiente);
   transition: 0.5s ease-out;
 }
+
 .ambiente.marine {
   background: var(--marine);
   transition: 0.5s ease-out;
 }
+
 .ambiente.grenada {
   background: var(--grenada);
   transition: 0.5s ease-out;
 }
+
 .ambiente.mentan {
   background: var(--mentan);
   transition: 0.5s ease-out;
@@ -55,7 +60,7 @@
 
 .theme-selector-value.activator {
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .theme-selector-value {
@@ -73,6 +78,8 @@
   backdrop-filter: blur(5px);
   border-radius: 80px;
   cursor: pointer;
+
+  transition: 0.2s ease-out;
 }
 
 .theme-selector-color {
@@ -86,26 +93,31 @@
 .theme-selector-color.barista {
   background: var(--ambiente);
 }
+
 .theme-selector-color.marine {
   background: radial-gradient(rgb(19, 87, 233), rgb(2, 21, 63));
 }
+
 .theme-selector-color.grenada {
   background: radial-gradient(rgb(25, 175, 105), rgb(6, 82, 47));
 }
+
 .theme-selector-color.mentan {
   background: radial-gradient(rgb(194, 243, 255), rgb(127, 174, 185));
 }
 
 .theme-selector-color.activator {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 36px;
+  transition: 0.2s ease-out;
+
 }
 
 .theme-selector-color.activator.active {
-  color: white;
+  color: rgba(0, 0, 0, 0.6);
 }
