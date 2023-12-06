@@ -15,8 +15,10 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function Home() {
+  const [coordinates, setCoordinates] = useState("47°23'09.8\"N 8°32'01.2\"E");
   return (
     <main>
       <div className="ambiente mentan" id="ambiente-mentan"></div>
@@ -24,7 +26,7 @@ export default function Home() {
       <div className="ambiente marine" id="ambiente-marine"></div>
       <div className="ambiente barista active" id="ambiente-barista"></div>
 
-      <Navbar />
+      <Navbar coordinator={setCoordinates} prevCoordinate={coordinates} />
       <div className="section room" id="home">
         <motion.div
           className="room-title"
@@ -40,6 +42,7 @@ export default function Home() {
         </motion.div>
         <motion.div
           className="room-location"
+          id="room-location"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
@@ -48,7 +51,7 @@ export default function Home() {
           }}
           viewport={{ once: false }}
         >
-          47°23'09.8"N 8°32'01.2"E
+          {coordinates}
         </motion.div>
 
         <motion.div

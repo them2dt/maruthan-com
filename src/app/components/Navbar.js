@@ -3,7 +3,7 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaintBrush, faPalette } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar() {
+export default function Navbar({ prevCoordinate, coordinator }) {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -54,21 +54,25 @@ export default function Navbar() {
       document.getElementById("ambiente-mentan").classList.remove("active");
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.remove("active");
+      coordinator("47°16'08.8\"N 9°23'56.5\"E");
     } else if (theme == "mentan") {
       document.getElementById("ambiente-marine").classList.remove("active");
       document.getElementById("ambiente-mentan").classList.add("active");
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.remove("active");
+      coordinator("39°30'44.5\"N 2°44'50.8\"E");
     } else if (theme == "grenada") {
       document.getElementById("ambiente-marine").classList.remove("active");
       document.getElementById("ambiente-mentan").classList.remove("active");
       document.getElementById("ambiente-grenada").classList.add("active");
       document.getElementById("ambiente-barista").classList.remove("active");
+      coordinator("7°57'26.3\"N 80°45'37.5\"E");
     } else if (theme == "barista") {
       document.getElementById("ambiente-marine").classList.remove("active");
       document.getElementById("ambiente-mentan").classList.remove("active");
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.add("active");
+      coordinator("46°58'44.6\"N 8°15'13.8\"E");
     }
   };
 
