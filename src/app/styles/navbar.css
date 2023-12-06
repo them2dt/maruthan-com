@@ -108,7 +108,7 @@
   .navbar-box {
     position: fixed;
     bottom: 20px;
-    left: calc(50% - 205px);
+    left: calc(50% - 175px);
 
     display: flex;
     align-items: flex-end;
@@ -120,9 +120,9 @@
   .navbar-loader-container {
     position: fixed;
     bottom: 20px;
-    left: calc(50vw - 205px);
+    left: calc(50vw - 175px);
 
-    width: 470px;
+    width: 260px;
     height: 80px;
 
     border-radius: 80px;
@@ -137,7 +137,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 320px;
+    width: 260px;
     height: 80px;
 
     background-color: rgba(255, 255, 255, 0.1);
@@ -149,7 +149,7 @@
     align-items: center;
     justify-content: center;
 
-    width: 320px;
+    width: 260px;
     height: 80px;
 
     background-color: rgba(255, 255, 255, 0.1);
@@ -163,11 +163,12 @@
     align-items: center;
     justify-content: center;
 
-    width: 100px;
+    width: 80px;
     height: 60px;
 
     border-radius: 80px;
 
+    font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
 
     cursor: pointer;
