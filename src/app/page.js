@@ -171,7 +171,7 @@ export default function Home() {
                         In this step i'll build a solana program step-by-step.
                       </div>
                     </div>
-                    <div className="blog-grid-item-button">dive in!</div>
+                    <div className="blog-grid-item-button">coming soon</div>
                   </div>
                 </motion.div>
               </div>
@@ -182,16 +182,19 @@ export default function Home() {
       <div className="section socials" id="contact">
         <div className="socials-grid">
           <div className="socials-grid-item">
-            <FontAwesomeIcon icon={faGithub} />
+            <Link href={"https://github.com/them2dt"} target="_blank">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
           </div>
           <div className="socials-grid-item">
-            <FontAwesomeIcon icon={faTwitter} />
+            <Link href={"https://x.com/them2dt"} target="_blank">
+              <FontAwesomeIcon icon={faTwitter} />
+            </Link>
           </div>
           <div className="socials-grid-item">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </div>
-          <div className="socials-grid-item">
+          <Link href={"https://instagram.com/maruthan.pdf"} target="_blank">
             <FontAwesomeIcon icon={faInstagram} />
+            </Link>
           </div>
         </div>
       </div>
