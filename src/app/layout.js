@@ -15,14 +15,14 @@ export default function RootLayout({ children }) {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@Maruthan" />
         <meta name="twitter:title" content="Maruthan" />
-        <meta name="twitter:description" content="Building dreams." />
+        <meta name="twitter:description" content="I create." />
         <meta
           name="twitter:image"
           content="https://bafkreiga27mlvbr4lc6luxnqhxyqw7ksfh4hc6s2hshbnjj5zgisnfahn4.ipfs.nftstorage.link/"
         />
 
         <meta property="og:title" content="Maruthan" />
-        <meta property="og:description" content="Building dreams." />
+        <meta property="og:description" content="I create." />
         <meta
           property="og:image"
           content="https://bafkreiga27mlvbr4lc6luxnqhxyqw7ksfh4hc6s2hshbnjj5zgisnfahn4.ipfs.nftstorage.link/"
