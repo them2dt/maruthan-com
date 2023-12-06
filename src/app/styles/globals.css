@@ -2,10 +2,12 @@
   font-family: "clash-semibold";
   src: url("./fonts/ClashDisplay-Semibold.otf");
 }
+
 @font-face {
   font-family: "switzer-regular";
   src: url("./fonts/Switzer-Regular.otf");
 }
+
 @font-face {
   font-family: "jb-regular";
   src: url("./fonts/JetBrainsMono-Regular.ttf");
@@ -20,23 +22,31 @@
 
 :root {
   scroll-behavior: smooth;
-  --ambiente: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
-  --barista: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
   --marine: radial-gradient(rgb(19, 87, 233), rgb(2, 21, 63));
   --grenada: radial-gradient(rgb(25, 175, 105), rgb(6, 82, 47));
+  --barista: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
+  --ambiente: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
   --mentan: radial-gradient(rgb(143, 211, 228), rgb(108, 153, 163));
+
+  --base: var(--barista-base);
+  --marine-base: rgb(2, 21, 63);
+  --grenada-base: rgb(6, 82, 47);
+  --barista-base: rgb(92, 42, 20);
+  --mentan-base: rgb(108, 153, 163);
 }
 
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
 }
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: "switzer-regular";
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -45,7 +55,12 @@ a {
 body::-webkit-scrollbar {
   display: none;
 }
+
 body {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+
+  background-color: var(--base);
 }

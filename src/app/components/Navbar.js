@@ -55,24 +55,37 @@ export default function Navbar({ prevCoordinate, coordinator }) {
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.remove("active");
       coordinator("47°16'08.8\"N 9°23'56.5\"E");
+      
+      const body = document.querySelector("body");
+      body.style.setProperty("--base", "rgb(2, 21, 63)");
+
     } else if (theme == "mentan") {
       document.getElementById("ambiente-marine").classList.remove("active");
       document.getElementById("ambiente-mentan").classList.add("active");
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.remove("active");
       coordinator("39°30'44.5\"N 2°44'50.8\"E");
+
+      const body = document.querySelector("body");
+      body.style.setProperty("--base", "rgb(108, 153, 163)");
     } else if (theme == "grenada") {
       document.getElementById("ambiente-marine").classList.remove("active");
       document.getElementById("ambiente-mentan").classList.remove("active");
       document.getElementById("ambiente-grenada").classList.add("active");
       document.getElementById("ambiente-barista").classList.remove("active");
       coordinator("7°57'26.3\"N 80°45'37.5\"E");
+
+      const body = document.querySelector("body");
+      body.style.setProperty("--base", "rgb(6, 82, 47)");
     } else if (theme == "barista") {
       document.getElementById("ambiente-marine").classList.remove("active");
       document.getElementById("ambiente-mentan").classList.remove("active");
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.add("active");
       coordinator("51°30'19.3\"N 0°04'31.4\"W");
+
+      const body = document.querySelector("body");
+      body.style.setProperty("--base", "rgb(92, 42, 20)");
     }
   };
 
