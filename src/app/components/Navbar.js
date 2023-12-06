@@ -72,7 +72,7 @@ export default function Navbar({ prevCoordinate, coordinator }) {
       document.getElementById("ambiente-mentan").classList.remove("active");
       document.getElementById("ambiente-grenada").classList.remove("active");
       document.getElementById("ambiente-barista").classList.add("active");
-      coordinator("46°58'44.6\"N 8°15'13.8\"E");
+      coordinator("51°30'19.3\"N 0°04'31.4\"W");
     }
   };
 

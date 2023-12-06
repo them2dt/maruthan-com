@@ -100,7 +100,16 @@ export default function Home() {
         <div className="projects-container">
           <div className="projects-title">Selected Projects</div>
           <div className="projects-grid">
-            <div className="project">
+            <motion.div
+              className="project"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.5,
+              }}
+              viewport={{ once: false }}
+            >
               <div className="project-details">
                 <div className="project-title">DistriDoc</div>
                 <div className="project-description">
@@ -115,8 +124,17 @@ export default function Home() {
                   <FontAwesomeIcon icon={faGithub} />
                 </Link>
               </div>
-            </div>
-            <div className="project">
+            </motion.div>
+            <motion.div
+              className="project"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                duration: 0.2,
+                delay: 0.5,
+              }}
+              viewport={{ once: false }}
+            >
               <div className="project-details">
                 <div className="project-title">CrowdSwift</div>
                 <div className="project-description">
@@ -131,7 +149,7 @@ export default function Home() {
                   <FontAwesomeIcon icon={faGithub} />
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -192,8 +210,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="socials-grid-item">
-          <Link href={"https://instagram.com/maruthan.pdf"} target="_blank">
-            <FontAwesomeIcon icon={faInstagram} />
+            <Link href={"https://instagram.com/maruthan.pdf"} target="_blank">
+              <FontAwesomeIcon icon={faInstagram} />
             </Link>
           </div>
         </div>
