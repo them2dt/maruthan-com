@@ -152,8 +152,8 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                   exit={{ opacity: 0, y: 50 }}
                   //
                   transition={{
-                    duration: 0.1,
-                    delay: 0.6,
+                    duration: 0.2,
+                    delay: 1.1,
                   }}
                 >
                   <motion.div className="theme-selector-color mentan"></motion.div>
@@ -168,8 +168,8 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                   exit={{ opacity: 0, y: 50 }}
                   //
                   transition={{
-                    duration: 0.1,
-                    delay: 0.4,
+                    duration: 0.2,
+                    delay: 0.8,
                   }}
                 >
                   <motion.div className="theme-selector-color grenada"></motion.div>
@@ -184,8 +184,8 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                   exit={{ opacity: 0, y: 50 }}
                   //
                   transition={{
-                    duration: 0.1,
-                    delay: 0.2,
+                    duration: 0.2,
+                    delay: 0.5,
                   }}
                 >
                   <motion.div className="theme-selector-color marine"></motion.div>
@@ -200,8 +200,8 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                   exit={{ opacity: 0, y: 50 }}
                   //
                   transition={{
-                    duration: 0.1,
-                    delay: 0,
+                    duration: 0.2,
+                    delay: 0.2,
                   }}
                 >
                   <motion.div className="theme-selector-color barista"></motion.div>
