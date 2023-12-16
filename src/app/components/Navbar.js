@@ -94,7 +94,7 @@ export default function Navbar({ prevCoordinate, coordinator }) {
       <motion.div className="navbar-loader-container">
         <motion.div
           className="navbar-loader"
-          style={{ scaleX, borderRadius: 80 }}
+          style={{ scaleX, borderRadius: 20 }}
         ></motion.div>
       </motion.div>
       <motion.div className="navbar-box">
