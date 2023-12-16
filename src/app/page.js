@@ -210,7 +210,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="socials-grid-item">
-            <Link href={"https://instagram.com/maruthan.pdf"} target="_blank">
+            <Link href={"https://instagram.com/maruthan.js"} target="_blank">
               <FontAwesomeIcon icon={faInstagram} />
             </Link>
           </div>
