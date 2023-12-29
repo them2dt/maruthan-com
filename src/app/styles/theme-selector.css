@@ -11,34 +11,25 @@
 
   z-index: -1;
 
-  opacity: 0;
 
   pointer-events: none;
-}
-
-.ambiente.active {
-  opacity: 1;
-  transition: 0.5s ease-out;
+  transition: 0.5 ease-out;
 }
 
 .ambiente.barista {
   background: var(--ambiente);
-  transition: 0.5s ease-out;
 }
 
 .ambiente.marine {
   background: var(--marine);
-  transition: 0.5s ease-out;
 }
 
 .ambiente.grenada {
   background: var(--grenada);
-  transition: 0.5s ease-out;
 }
 
 .ambiente.mentan {
   background: var(--mentan);
-  transition: 0.5s ease-out;
 }
 
 .section {

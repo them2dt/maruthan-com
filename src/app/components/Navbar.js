@@ -3,7 +3,14 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaintBrush, faPalette } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar({ prevCoordinate, coordinator }) {
+export default function Navbar({
+  activateMarine,
+  activateMentan,
+  activateBarista,
+  activateGrenada,
+  prevCoordinate,
+  coordinator,
+}) {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -45,47 +52,6 @@ export default function Navbar({ prevCoordinate, coordinator }) {
       deactivate();
     } else {
       activate();
-    }
-  };
-
-  const setAmbiente = ({ theme }) => {
-    if (theme == "marine") {
-      document.getElementById("ambiente-marine").classList.add("active");
-      document.getElementById("ambiente-mentan").classList.remove("active");
-      document.getElementById("ambiente-grenada").classList.remove("active");
-      document.getElementById("ambiente-barista").classList.remove("active");
-      coordinator("47°16'08.8\"N 9°23'56.5\"E");
-      
-      const body = document.querySelector("body");
-      body.style.setProperty("--base", "rgb(2, 21, 63)");
-
-    } else if (theme == "mentan") {
-      document.getElementById("ambiente-marine").classList.remove("active");
-      document.getElementById("ambiente-mentan").classList.add("active");
-      document.getElementById("ambiente-grenada").classList.remove("active");
-      document.getElementById("ambiente-barista").classList.remove("active");
-      coordinator("39°30'44.5\"N 2°44'50.8\"E");
-
-      const body = document.querySelector("body");
-      body.style.setProperty("--base", "rgb(108, 153, 163)");
-    } else if (theme == "grenada") {
-      document.getElementById("ambiente-marine").classList.remove("active");
-      document.getElementById("ambiente-mentan").classList.remove("active");
-      document.getElementById("ambiente-grenada").classList.add("active");
-      document.getElementById("ambiente-barista").classList.remove("active");
-      coordinator("7°57'26.3\"N 80°45'37.5\"E");
-
-      const body = document.querySelector("body");
-      body.style.setProperty("--base", "rgb(6, 82, 47)");
-    } else if (theme == "barista") {
-      document.getElementById("ambiente-marine").classList.remove("active");
-      document.getElementById("ambiente-mentan").classList.remove("active");
-      document.getElementById("ambiente-grenada").classList.remove("active");
-      document.getElementById("ambiente-barista").classList.add("active");
-      coordinator("51°30'19.3\"N 0°04'31.4\"W");
-
-      const body = document.querySelector("body");
-      body.style.setProperty("--base", "rgb(92, 42, 20)");
     }
   };
 
@@ -145,7 +111,7 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                 <motion.div
                   className="theme-selector-value"
                   key={0}
-                  onClick={() => setAmbiente({ theme: "mentan" })}
+                  onClick={activateMentan}
                   //
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -161,7 +127,7 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                 <motion.div
                   className="theme-selector-value"
                   key={1}
-                  onClick={() => setAmbiente({ theme: "grenada" })}
+                  onClick={activateGrenada}
                   //
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -177,7 +143,7 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                 <motion.div
                   className="theme-selector-value"
                   key={2}
-                  onClick={() => setAmbiente({ theme: "marine" })}
+                  onClick={activateMarine}
                   //
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -193,7 +159,7 @@ export default function Navbar({ prevCoordinate, coordinator }) {
                 <motion.div
                   className="theme-selector-value"
                   key={3}
-                  onClick={() => setAmbiente({ theme: "barista" })}
+                  onClick={activateBarista}
                   //
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}

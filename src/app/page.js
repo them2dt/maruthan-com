@@ -4,10 +4,10 @@
 import Link from "next/link";
 import Image from "next/image";
 //local components
-import tag from "./media/tag-2.png";
+import mt_cube_barista from "./media/mt-cube-barista.png";
 import Navbar from "./components/Navbar";
 //framer
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 //fontawesome
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -19,24 +19,98 @@ import { useState } from "react";
 
 export default function Home() {
   const [coordinates, setCoordinates] = useState("47°23'09.8\"N 8°32'01.2\"E");
+  const [theme, setTheme] = useState("barista");
+
+  const appearanceTransition = { delay: 0.4, duration: 0.2 };
+  const themeTransition = { duration: 0.8 };
+  const variants = {
+    show: {
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+        duration: 0.3,
+      },
+    },
+    hide: {
+      opacity: 0,
+    },
+  };
+
+  const activateMarine = () => {
+    setTheme("marine");
+  };
+  const activateMentan = () => {
+    setTheme("mentan");
+  };
+  const activateBarista = () => {
+    setTheme("barista");
+  };
+  const activateGrenada = () => {
+    setTheme("grenada");
+  };
   return (
     <main>
-      <div className="ambiente mentan" id="ambiente-mentan"></div>
-      <div className="ambiente grenada" id="ambiente-grenada"></div>
-      <div className="ambiente marine" id="ambiente-marine"></div>
-      <div className="ambiente barista active" id="ambiente-barista"></div>
-
-      <Navbar coordinator={setCoordinates} prevCoordinate={coordinates} />
+      <AnimatePresence>
+        {theme == "mentan" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={themeTransition}
+            className="ambiente mentan"
+            id="ambiente-mentan"
+          ></motion.div>
+        )}
+        {theme == "grenada" && (
+          <motion.div
+            initial={{ opacity: 0, transitionDuration: 0.8 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={themeTransition}
+            className="ambiente grenada"
+            id="ambiente-grenada"
+          ></motion.div>
+        )}
+        {theme == "marine" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={themeTransition}
+            className="ambiente marine"
+            id="ambiente-marine"
+          ></motion.div>
+        )}
+        
+        {theme == "barista" && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={themeTransition}
+            className="ambiente barista"
+            id="ambiente-barista"
+          ></motion.div>
+        )}
+      </AnimatePresence>
+      <Navbar
+        activateMentan={activateMentan}
+        activateMarine={activateMarine}
+        activateGrenada={activateGrenada}
+        activateBarista={activateBarista}
+        coordinator={setCoordinates}
+        prevCoordinate={coordinates}
+      />
       <div className="section room" id="home">
         <motion.div
           className="room-title"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.2,
-            delay: 1,
-          }}
+          transition={appearanceTransition}
           viewport={{ once: false }}
+          onClick={() => {
+            setTheme("gay");
+          }}
         >
           Maruthan
         </motion.div>
@@ -45,10 +119,7 @@ export default function Home() {
           id="room-location"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.2,
-            delay: 1,
-          }}
+          transition={appearanceTransition}
           viewport={{ once: false }}
         >
           {coordinates}
@@ -58,10 +129,7 @@ export default function Home() {
           className="room-description"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.2,
-            delay: 0.5,
-          }}
+          transition={appearanceTransition}
           viewport={{ once: false }}
         >
           <div className="room-description-mobile-box">
@@ -74,26 +142,25 @@ export default function Home() {
           className="room-version"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{
-            duration: 0.2,
-            delay: 1,
-          }}
+          transition={appearanceTransition}
           viewport={{ once: false }}
         >
           Version 2023
         </motion.div>
         <motion.div className="room-tag-container">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 0.5, scale: 1 }}
-            transition={{
-              duration: 0.2,
-              delay: 1,
-            }}
-            viewport={{ once: false }}
-          >
-            <Image className="room-tag" alt="tag" src={tag} />
-          </motion.div>
+          <AnimatePresence>
+            {theme == "barista" && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={themeTransition}
+                exit={{ opacity: 0, scale: 0.9 }}
+                viewport={{ once: false }}
+              >
+                <Image className="room-tag" alt="tag" src={mt_cube_barista} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
       </div>
       <div className="section projects" id="projects">
@@ -104,10 +171,7 @@ export default function Home() {
               className="project"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.5,
-              }}
+              transition={appearanceTransition}
               viewport={{ once: false }}
             >
               <div className="project-details">
@@ -129,10 +193,7 @@ export default function Home() {
               className="project"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.5,
-              }}
+              transition={appearanceTransition}
               viewport={{ once: false }}
             >
               <div className="project-details">
@@ -161,10 +222,7 @@ export default function Home() {
               className="blog-grid-box"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{
-                duration: 0.2,
-                delay: 0.5,
-              }}
+              transition={appearanceTransition}
               viewport={{ once: false }}
             >
               <div className="blog-grid">
@@ -172,10 +230,7 @@ export default function Home() {
                   className="blog-grid-item"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 0.2,
-                    delay: 0.5,
-                  }}
+                  transition={appearanceTransition}
                   viewport={{ once: false }}
                 >
                   <div className="blog-grid-item-type">Blog</div>
