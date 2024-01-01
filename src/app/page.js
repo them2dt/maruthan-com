@@ -36,18 +36,6 @@ export default function Home() {
     },
   };
 
-  const activateMarine = () => {
-    setTheme("marine");
-  };
-  const activateMentan = () => {
-    setTheme("mentan");
-  };
-  const activateBarista = () => {
-    setTheme("barista");
-  };
-  const activateGrenada = () => {
-    setTheme("grenada");
-  };
   return (
     <main>
       <AnimatePresence>
@@ -81,7 +69,7 @@ export default function Home() {
             id="ambiente-marine"
           ></motion.div>
         )}
-        
+
         {theme == "barista" && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -94,10 +82,7 @@ export default function Home() {
         )}
       </AnimatePresence>
       <Navbar
-        activateMentan={activateMentan}
-        activateMarine={activateMarine}
-        activateGrenada={activateGrenada}
-        activateBarista={activateBarista}
+        changeTheme={setTheme}
         coordinator={setCoordinates}
         prevCoordinate={coordinates}
       />
