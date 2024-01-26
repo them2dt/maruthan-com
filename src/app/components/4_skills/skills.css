@@ -1,0 +1,29 @@
+.skills {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.skills .box {
+
+    width: 900px;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.skills .box div {
+    font-family: "satoshi-black";
+    font-size: 48px;
+    color: var(--orange-dimmed);
+
+}
