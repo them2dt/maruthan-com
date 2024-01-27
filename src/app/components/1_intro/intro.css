@@ -15,7 +15,7 @@
     width: calc(100vw - 200px);
     height: calc(100vh - 200px);
 
-    background-image: radial-gradient(var(--orange-blended) 0%, var(--transparent)30%);
+    background-image: radial-gradient(var(--orange-blended) 0%, var(--transparent)60%);
 
     animation: intro-glow 4s infinite;
 }

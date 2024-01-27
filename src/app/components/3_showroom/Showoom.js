@@ -10,16 +10,15 @@ import Image from "next/image";
 import "./showroom.css";
 
 export default function Showoom() {
-  const showroomRef = useRef();
-  const { scrollY, scrollYProgress } = useScroll({ target: showroomRef });
+  const ref = useRef();
+  const { scrollY, scrollYProgress } = useScroll({ target: ref });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log("rotate: ", rotate.get());
-  });
+  const moveDown = useTransform(scrollYProgress, [0, 0.75], [0, 1000]);
+  const moveUp = useTransform(scrollYProgress, [0, 0.75], [0, -500]);
+  const fadeAway = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
-    <motion.div className="showroom" ref={showroomRef}>
+    <motion.div className="showroom" ref={ref}>
       <motion.div className="info">
         <motion.div className="heading-2">The showroom</motion.div>
         <motion.div className="text">
@@ -30,9 +29,8 @@ export default function Showoom() {
         <motion.div className="column">
           <motion.div
             className="project"
-            style={{
-              y: rotate,
-            }}
+            style={{ y: moveDown,opacity:fadeAway }}
+            transition={{ type: "spring", stiffness: 100 }}
           >
             <motion.div className="info">
               <motion.div className="heading-3">Sporting Labs</motion.div>
@@ -47,9 +45,8 @@ export default function Showoom() {
           <motion.div className="row">
             <motion.div
               className="project"
-              style={{
-                y: rotate,
-              }}
+              style={{ y: moveUp, opacity: fadeAway }}
+              transition={{ type: "spring", stiffness: 100 }}
             >
               <motion.div className="info">
                 <motion.div className="heading-4">MonoFusion</motion.div>
@@ -62,9 +59,8 @@ export default function Showoom() {
             </motion.div>
             <motion.div
               className="project"
-              style={{
-                y: rotate,
-              }}
+              style={{ y: moveUp, opacity: fadeAway }}
+              transition={{ type: "spring", stiffness: 100 }}
             >
               <motion.div className="info">
                 <motion.div className="heading-4">DistriDoc</motion.div>

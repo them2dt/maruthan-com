@@ -1,4 +1,3 @@
-
 .footer {
     width: 100%;
     min-height: 100vh;
@@ -23,7 +22,7 @@
 }
 
 .footer .box div {
-    font-family: "satoshi-black";
+    font-family: "clash-medium";
     font-size: 48px;
     color: var(--orange-dimmed);
 

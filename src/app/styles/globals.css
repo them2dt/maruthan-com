@@ -13,6 +13,21 @@
   src: url(../fonts/Satoshi-Regular.otf);
 }
 
+@font-face {
+  font-family: clash-bold;
+  src: url(../fonts/ClashDisplay-Bold.otf);
+}
+
+@font-face {
+  font-family: clash-medium;
+  src: url(../fonts/ClashDisplay-Medium.otf);
+}
+
+@font-face {
+  font-family: clash-regular;
+  src: url(../fonts/ClashDisplay-Regular.otf);
+}
+
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -34,100 +49,41 @@ body {
   color: var(--white);
 }
 
-@media only screen and (min-width: 768px) {
 
-
-  .title {
-    font-family: "satoshi-black";
-    font-size: 64px;
-    letter-spacing: 1;
-  }
-
-  .heading-1 {
-    font-family: "satoshi-black";
-    font-size: 48px;
-    letter-spacing: 1;
-  }
-
-  .heading-2 {
-    font-family: "satoshi-black";
-    font-size: 36px;
-    letter-spacing: -1px;
-    line-height: 30px;
-  }
-
-  .heading-3 {
-    font-family: "satoshi-black";
-    font-size: 24px;
-    letter-spacing: 1;
-  }
-
-  .heading-4 {
-    font-family: "satoshi-black";
-    font-size: 24px;
-    letter-spacing: 1;
-  }
-
-
-  .text {
-    font-family: "satoshi-medium";
-    font-size: 24px;
-    letter-spacing: 1;
-  }
-
-  .button {
-    font-family: "satoshi-black";
-    font-size: 16px;
-    letter-spacing: 1;
-
-  }
+.title {
+  font-family: "clash-bold";
+  font-size: 64px;
 }
 
-@media only screen and (max-width: 768px) {
+.heading-1 {
+  font-family: "clash-bold";
+  font-size: 48px;
+}
+
+.heading-2 {
+  font-family: "clash-bold";
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.heading-3 {
+  font-family: "clash-bold";
+  font-size: 24px;
+}
+
+.heading-4 {
+  font-family: "clash-bold";
+  font-size: 24px;
+}
 
 
-  .title {
-    font-family: "satoshi-black";
-    font-size: 36px;
-    letter-spacing: 1;
-  }
+.text {
+  font-family: "satoshi-medium";
+  font-size: 24px;
+}
 
-  .heading-1 {
-    font-family: "satoshi-black";
-    font-size: 32px;
-    letter-spacing: 1;
-  }
+.button {
+  font-family: "clash-medium";
+  font-size: 16px;
 
-  .heading-2 {
-    font-family: "satoshi-black";
-    font-size: 28px;
-    letter-spacing: -1px;
-    line-height: 30px;
-  }
-
-  .heading-3 {
-    font-family: "satoshi-black";
-    font-size: 24px;
-    letter-spacing: 1;
-  }
-
-  .heading-4 {
-    font-family: "satoshi-black";
-    font-size: 22px;
-    letter-spacing: 1;
-  }
-
-
-  .text {
-    font-family: "satoshi-medium";
-    font-size: 18px;
-    letter-spacing: 1;
-  }
-
-  .button {
-    font-family: "satoshi-black";
-    font-size: 16px;
-    letter-spacing: 1;
-
-  }
 }
