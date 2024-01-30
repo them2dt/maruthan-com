@@ -1,66 +1,89 @@
 @font-face {
-  font-family: "clash-semibold";
-  src: url("./fonts/ClashDisplay-Semibold.otf");
+  font-family: satoshi-black;
+  src: url(../fonts/Satoshi-Black.otf);
 }
 
 @font-face {
-  font-family: "switzer-regular";
-  src: url("./fonts/Switzer-Regular.otf");
+  font-family: satoshi-medium;
+  src: url(../fonts/Satoshi-Medium.otf);
 }
 
 @font-face {
-  font-family: "jb-regular";
-  src: url("./fonts/JetBrainsMono-Regular.ttf");
+  font-family: satoshi-regular;
+  src: url(../fonts/Satoshi-Regular.otf);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  --section-color: #000000;
+@font-face {
+  font-family: clash-bold;
+  src: url(../fonts/ClashDisplay-Bold.otf);
+}
+
+@font-face {
+  font-family: clash-medium;
+  src: url(../fonts/ClashDisplay-Medium.otf);
+}
+
+@font-face {
+  font-family: clash-regular;
+  src: url(../fonts/ClashDisplay-Regular.otf);
 }
 
 :root {
-  scroll-behavior: smooth;
-  --marine: radial-gradient(rgb(19, 87, 233), rgb(2, 21, 63));
-  --grenada: radial-gradient(rgb(25, 175, 105), rgb(6, 82, 47));
-  --barista: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
-  --ambiente: radial-gradient(rgb(233, 130, 85), rgb(92, 42, 20));
-  --mentan: radial-gradient(rgb(143, 211, 228), rgb(108, 153, 163));
-
-  --base: var(--barista-base);
-  --marine-base: rgb(2, 21, 63);
-  --grenada-base: rgb(6, 82, 47);
-  --barista-base: rgb(92, 42, 20);
-  --mentan-base: rgb(108, 153, 163);
-}
-
-html {
-  --scroll-behavior: smooth !important;
-  scroll-behavior: smooth !important;
+  --black: #000000;
+  --white: #ffffff;
+  --transparent: #ffffff00;
+  --pastel: #F9F2DB;
+  --orange: #ff4000;
+  --orange-blended: #ff855c;
+  --orange-dimmed: #8f2400;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: "switzer-regular";
+  background-color: var(--orange);
+
+  margin: 0;
+  padding: 0;
+  color: var(--white);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+.title {
+  font-family: "clash-bold";
+  font-size: 64px;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+.heading-1 {
+  font-family: "clash-bold";
+  font-size: 48px;
 }
 
-body {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+.heading-2 {
+  font-family: "clash-bold";
+  font-size: 36px;
+  line-height: 30px;
+}
 
-  background-color: var(--base);
+.heading-3 {
+  font-family: "clash-bold";
+  font-size: 24px;
+}
+
+.heading-4 {
+  font-family: "clash-bold";
+  font-size: 24px;
+}
+
+
+.text {
+  font-family: "satoshi-medium";
+  font-size: 24px;
+}
+
+.button {
+  font-family: "clash-medium";
+  font-size: 16px;
+
 }

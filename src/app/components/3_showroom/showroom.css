@@ -1,0 +1,101 @@
+@media only screen and (min-width: 768px) {
+    .showroom {
+        width: 100%;
+        min-height: 200vh;
+        padding-bottom: 100px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 100px;
+        text-align: center;
+    }
+
+
+    .showroom .projects .column {
+        width: 1200px;
+        height: fit-content;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .showroom .projects .column .project {
+        position: relative;
+
+        width: 600px;
+        height: 800px;
+
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+    .showroom .projects .column .project .info {
+        position: absolute;
+
+        top: 40px;
+        left: 40px;
+
+        text-align: left;
+    }
+
+
+
+    .showroom .projects .column .project .image {
+        position: absolute;
+        bottom: -200px;
+        left: 0px;
+        width: 800px;
+        height: 800px;
+    }
+
+    .showroom .projects .column .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .showroom .projects .column .row .project {
+        position: relative;
+
+        width: 380px;
+        height: 390px;
+
+        border-radius: 40px;
+        overflow: hidden;
+    }
+
+    .showroom .projects .column .row .project .info {
+        position: absolute;
+
+        top: 40px;
+        left: 40px;
+
+        text-align: left;
+    }
+
+    .showroom .projects .column .row .project .info .text {
+        font-size: 14px;
+    }
+
+    .showroom .projects .column .row .project .image {
+        position: absolute;
+        bottom: -200px;
+        left: 0px;
+        width: 400px;
+        height: 400px;
+    }
+
+
+    .showroom .project {
+        background-color: var(--white);
+        color: var(--black);
+        cursor: pointer;
+    }
+}
