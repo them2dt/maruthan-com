@@ -1,29 +1,33 @@
-.skills {
-    width: 100%;
-    min-height: 100vh;
+@media only screen and (min-width: 768px) {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
-.skills .box {
+    .skills {
+        width: 100%;
+        min-height: 100vh;
 
-    width: 900px;
-    height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-}
+    .skills .box {
 
-.skills .box div {
-    font-family: "clash-medium";
-    font-size: 48px;
-    color: var(--orange-dimmed);
+        width: 900px;
+        height: fit-content;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .skills .box div {
+        font-family: "clash-medium";
+        font-size: 48px;
+        color: var(--orange-dimmed);
+
+    }
 }
