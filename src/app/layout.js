@@ -1,30 +1,35 @@
 import "./styles/globals.css";
 import "./styles/home.css";
+export const metadata = {
+  title: "Maruthan.",
+  description: "Developer with a passion for design.",
+  openGraph: {
+    title: "Maruthan.",
+    description: "Developer with a passion for design.",
+    url: "https://emptea.xyz",
+    siteName: "Maruthan.",
+    images: [
+      {
+        url: "https://bafkreidq6mrw6w44nazpaae2rscvypww7yyt3wtqvtnfkptxiprelkb34i.ipfs.nftstorage.link/",
+        width: "1000",
+        height: "500",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maruthan.",
+    description: "Developer with a passion for design.",
+    creator: "@EmpteaStudios",
+    images: [
+      "https://bafkreidq6mrw6w44nazpaae2rscvypww7yyt3wtqvtnfkptxiprelkb34i.ipfs.nftstorage.link/",
+    ],
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <title>Emptea</title>
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@Maruthan" />
-        <meta name="twitter:title" content="Maruthan" />
-        <meta name="twitter:description" content="I create." />
-        <meta
-          name="twitter:image"
-          content="https://bafkreiga27mlvbr4lc6luxnqhxyqw7ksfh4hc6s2hshbnjj5zgisnfahn4.ipfs.nftstorage.link/"
-        />
-
-        <meta property="og:title" content="Maruthan" />
-        <meta property="og:description" content="I create." />
-        <meta
-          property="og:image"
-          content="https://bafkreiga27mlvbr4lc6luxnqhxyqw7ksfh4hc6s2hshbnjj5zgisnfahn4.ipfs.nftstorage.link/"
-        />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
-      </head>
       <body>{children}</body>
     </html>
   );
