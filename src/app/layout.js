@@ -1,5 +1,6 @@
 import "./styles/globals.css";
 import "./styles/home.css";
+
 export const metadata = {
   title: "Maruthan.",
   description: "Developer with a passion for design.",
