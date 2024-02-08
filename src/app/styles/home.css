@@ -1,19 +1,104 @@
-@media only screen and (min-width: 768px) {
-    .texture {
-        position: fixed;
-        top: 0;
-        left: 0;
+#hero .grid-horizontal {
+    position: absolute;
+    top: 0;
 
-        width: 100vw;
-        height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 
-        background-image: url("../media/texture.png");
-        background-size: cover;
+}
 
-        opacity: 0.1;
+#hero .grid-horizontal div {
+    width: calc(100vw / 8);
+    height: 100vh;
+    border: 0.1px solid var(--pencil);
 
-        z-index: 10;
 
-        display: none;
-    }
+}
+
+#hero .grid-vertical {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#hero .grid-vertical div {
+    width: 100vw;
+    height: calc(100vh / 4);
+
+    border: 0.1px solid var(--pencil);
+}
+
+#hero .hero-title {
+    position: absolute;
+    top: 25vh;
+    left: 0;
+
+    width: 100vw;
+
+    margin: 0;
+    padding: 0;
+
+    border-bottom: 2px solid var(--pencil);
+    box-sizing: border-box;
+}
+
+#hero .hero-specialities {
+
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    width: 260px;
+    height: 260px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 2px solid var(--pencil);
+    border-radius: 300px;
+    box-sizing: border-box;
+}
+
+#hero .hero-specialities:hover {
+    scale: 0.9;
+    transition-duration: 0.6s;
+
+}
+
+#hero .hero-specialities:not(:hover) {
+    transition-duration: 0.6s;
+}
+
+
+#hero .hero-base {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+
+    border-radius: 300px;
+
+    rotate: 45deg;
+
+}
+
+#hero .hero-base div {
+    height: 260px;
+
+    border: 1px solid var(--pencil);
 }

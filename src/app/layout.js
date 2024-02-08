@@ -1,6 +1,6 @@
 import "./styles/globals.css";
 import "./styles/home.css";
-
+/* 
 export const metadata = {
   title: "Maruthan.",
   description: "Developer with a passion for design.",
@@ -27,7 +27,7 @@ export const metadata = {
     ],
   },
 };
-
+ */
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
