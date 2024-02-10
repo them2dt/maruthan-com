@@ -10,7 +10,7 @@
     width: 100px;
     height: 10px;
     background-image: linear-gradient(45deg, #5578a0, #214772);
-    border-bottom: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -40,7 +40,63 @@
     width: 960px;
     height: 360px;
 
+
     background-color: var(--white);
 
     border-radius: 60px;
+    overflow: hidden;
+
+}
+
+#about .phone-box .phone-display .phone-text {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 920px;
+    height: 340px;
+
+    overflow: scroll;
+
+
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#about .phone-box .phone-display .phone-text span {
+    color: var(--accent);
+}
+
+#about .phone-box .phone-display .phone-dark-mode {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 960px;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    z-index: 30;
+
+    pointer-events: none;
+
+    transition-duration: 0.2s;
+}
+
+#about .phone-box .phone-display .phone-light-mode {
+    position: absolute;
+    top: 0;
+    left: -960px;
+    bottom: 0;
+
+    width: 960px;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    z-index: 30;
+
+    pointer-events: none;
+
+    transition-duration: 0.2s;
+
 }

@@ -93,3 +93,11 @@ body {
   letter-spacing: -0.05em;
   line-height: calc(75%);
 }
+
+.font-text-2 {
+  font-family: "satoshi";
+  font-size: 48px;
+  font-weight: 1000;
+  letter-spacing: -0.05em;
+  line-height: calc(120%);
+}
