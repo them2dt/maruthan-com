@@ -1,0 +1,16 @@
+#about {
+
+    width: 100vw;
+    height: 200vh;
+
+}
+
+#about .text-shade {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    width: 100vw;
+    height: 80vh;
+    background-color: aqua;
+
+}

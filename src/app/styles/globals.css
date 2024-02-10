@@ -3,6 +3,11 @@
   src: url(../fonts/Satoshi-Variable.ttf);
 }
 
+@font-face {
+  font-family: "code";
+  src: url(../fonts/JetBrainsMono[wght].ttf);
+}
+
 
 :root {
   --black: #000000;
@@ -35,6 +40,7 @@ body {
   color: var(--black);
 }
 
+
 .fp-section {
   position: relative;
 
@@ -59,10 +65,32 @@ body {
   line-height: calc(75%);
 }
 
+.font-navigation {
+  font-family: "satoshi";
+  font-size: 24px;
+  font-weight: 1000;
+  letter-spacing: -0.025em;
+  line-height: calc(75%);
+}
+
 .font-circular {
   font-family: "satoshi";
   font-size: 56px;
   font-weight: 1000;
   letter-spacing: -0.05em;
   line-height: calc(75%);
+}
+
+.font-code {
+  font-family: "code";
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.font-about {
+  font-family: "satoshi";
+  font-size: 96px;
+  font-weight: 1000;
+  letter-spacing: -0.05em;
+  line-height: calc(120%);
 }

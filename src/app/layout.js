@@ -1,5 +1,8 @@
 import "./styles/globals.css";
+import "./styles/notes.css";
 import "./styles/home.css";
+import "./styles/hero.css";
+import "./styles/about.css";
 /* 
 export const metadata = {
   title: "Maruthan.",

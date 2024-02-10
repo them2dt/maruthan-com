@@ -8,6 +8,7 @@
   scale: 0.4;
   animation: rotating 10s linear infinite;
   color: var(--accent);
+  mix-blend-mode: difference;
 
 }
 
