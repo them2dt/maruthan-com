@@ -1,0 +1,29 @@
+#hero {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+#hero .hero-title {
+    position: absolute;
+    top: 25vh;
+    left: 12.5vw;
+    width: 39vw;
+    height: 170px;
+
+    margin: 0;
+    padding: 0;
+}
+
+#hero .hero-description {
+    position: absolute;
+    top: calc(25vh + 160px);
+    left: calc(12.5vw + 20px);
+    width: 26vw;
+    height: 70px;
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--accent);
+}
