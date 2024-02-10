@@ -1,9 +1,3 @@
-#hero {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-}
-
 #hero .hero-title {
     position: absolute;
     top: 25vh;
@@ -26,4 +20,87 @@
     padding: 0;
 
     color: var(--accent);
+}
+
+#hero .hero-graphic-container {
+    position: absolute;
+    top: 25vh;
+    right: 12.5vw;
+
+    width: 25vw;
+    height: 50vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+#hero .hero-graphic {
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
+
+#hero .hero-graphic .drill {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border: 2px solid var(--pencil);
+    border-radius: 250px;
+
+    rotate: 45deg;
+
+    cursor: pointer;
+}
+
+#hero .hero-graphic .drill:hover {
+    rotate: 0deg;
+    scale: 1.1;
+    transition-duration: 0.4s;
+}
+
+#hero .hero-graphic .drill:not(:hover) {
+    transition-duration: 0.4s;
+}
+
+#hero .hero-graphic .drill:active {
+    rotate: 90deg;
+    scale: 1;
+    transition-duration: 0.2s;
+}
+
+#hero .hero-graphic .drill div {
+    height: 400px;
+    width: 1px;
+    background-color: var(--pencil);
+}
+
+#hero .hero-graphic .hole {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-color: var(--white);
+    border: 2px solid var(--pencil);
+    border-radius: 250px;
+
+    pointer-events: none;
 }

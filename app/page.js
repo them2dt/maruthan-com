@@ -1,10 +1,15 @@
-import Base from "../components/base/index";
-import Hero from "../components/hero/index";
+"use client";
+import Navigation from "../components/navigation";
+import Base from "../components/base";
+import Hero from "../components/hero";
+import About from "../components/about";
 export default function Home() {
   return (
-    <main>
-      <Base/>
+    <>
+      <Base />
       <Hero />
-    </main>
+      <About />
+      <Navigation />
+    </>
   );
 }
