@@ -15,8 +15,6 @@ export default function index() {
           <div className="drill">
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
 
             <div></div>
             <div></div>

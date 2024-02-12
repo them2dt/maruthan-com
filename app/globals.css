@@ -9,11 +9,8 @@
   --pencil: #dddddd;
   --accent: #ff5100;
 
-  --primary: rgb(255, 247, 179);
-  --secondary: rgb(21, 35, 75);
-
-  --primary: rgb(236, 159, 255);
-  --secondary: rgb(19, 126, 55);
+  --secondary: #357ed1;
+  --tertiary: #188126;
 }
 
 * {

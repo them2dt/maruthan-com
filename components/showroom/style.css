@@ -1,0 +1,92 @@
+#showroom {
+    height: 200vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showroom .column {
+    position: relative;
+
+    width: 50vw;
+    min-height: 200vh;
+}
+
+
+
+
+#showroom .column .block {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+
+}
+
+#showroom .column .block .content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    gap: 20px;
+
+    width: 30vw;
+    text-align: left;
+}
+
+#showroom .column .block .content .font-h3 {
+    color: var(--accent);
+}
+
+#showroom .column .block .content .font-text {
+    font-size: 36px;
+    line-height: 110%;
+}
+
+
+#showroom .column .block-1 {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showroom .column .block-1 .phone {
+    position: relative;
+
+    width: 400px;
+    height: 700px;
+
+    background-color: var(--accent);
+    border: 2px solid var(--black);
+    border-radius: 80px;
+}
+
+#showroom .column .block-1 .phone .display {
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+    width: calc(400px - 40px);
+    height: calc(700px - 40px);
+
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 60px;
+}
