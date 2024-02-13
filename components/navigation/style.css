@@ -6,6 +6,7 @@
     left: 20px;
 
     background-color: var(--white);
+    color: var(--black);
     border: 2px solid var(--pencil);
     border-radius: 100px;
     overflow: hidden;
@@ -45,7 +46,7 @@
 
     cursor: pointer;
     z-index: 1;
-    color: var(--white);
+    color: white;
     mix-blend-mode: difference;
 
 }

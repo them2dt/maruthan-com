@@ -1,100 +1,103 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import "./style.css";
 
-export default function index() {
+export default function index({ toggleMode }) {
   return (
-    <div className="hero fps" id="hero">
-      <div className="hero-title font-title">Maruthan Thanabalasingam</div>
-      <div className="hero-description font-text">
+    <motion.div className="hero fps" id="hero">
+      <motion.div className="hero-title font-title">
+        Maruthan Thanabalasingam
+      </motion.div>
+      <motion.div className="hero-description font-text">
         WEB - MOBILE - BLOCKCHAIN
-      </div>
+      </motion.div>
 
-      <div className="hero-graphic-container">
-        <div className="hero-graphic">
-          <div className="drill">
-            <div></div>
-            <div></div>
+      <motion.div className="hero-graphic-container">
+        <motion.div className="hero-graphic">
+          <motion.div className="drill" onClick={toggleMode}>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div className="hole"></div>
-          <div className="rotator"></div>
-        </div>
-      </div>
-    </div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+            <motion.div></motion.div>
+          </motion.div>
+          <motion.div className="hole"></motion.div>
+          <motion.div className="rotator"></motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

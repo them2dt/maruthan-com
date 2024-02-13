@@ -1,5 +1,5 @@
 #showroom {
-    height: 200vh;
+    min-height: 300vh;
 
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
     position: relative;
 
     width: 50vw;
-    min-height: 200vh;
+    min-height: calc(300vh + 300px);
 }
 
 
@@ -53,6 +53,8 @@
 #showroom .column .block .content .font-text {
     font-size: 36px;
     line-height: 110%;
+
+    color: var(--black);
 }
 
 
@@ -73,9 +75,44 @@
     width: 400px;
     height: 700px;
 
-    background-color: var(--accent);
+    background-color: var(--white);
     border: 2px solid var(--black);
     border-radius: 80px;
+}
+
+#showroom .column .block-1 .phone-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showroom .column .block-1 .buttons {
+    position: relative;
+    top: -100px;
+    right: -2px;
+}
+
+#showroom .column .block-1 .buttons .button {
+    position: relative;
+    width: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    cursor: pointer;
+}
+
+#showroom .column .block-1 .buttons .button:hover {
+    right: -1px;
+}
+
+#showroom .column .block-1 .buttons .button:active {
+    right: -2px;
 }
 
 #showroom .column .block-1 .phone .display {
@@ -89,4 +126,35 @@
     background-color: var(--white);
     border: 2px solid var(--black);
     border-radius: 60px;
+
+    overflow: hidden;
+}
+
+#showroom .column .block-1 .phone .display .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(44, 106, 161);
+}
+
+
+
+#showroom .column .block-1 .phone .display .frame-1 {
+    background-color: red;
+}
+
+#showroom .column .block-1 .phone .display .frame-2 {
+    background-color: green;
+}
+
+#showroom .column .block-1 .phone .display .frame-3 {
+    background-color: blue;
+}
+
+#showroom .column .block-2 {
+    margin-top: 300px;
 }

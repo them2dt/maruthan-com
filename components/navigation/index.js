@@ -1,7 +1,12 @@
 import React from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useSpring,
+} from "framer-motion";
 
 import "./style.css";
+import Link from "next/link";
 
 export default function index() {
   const { scrollYProgress } = useScroll();
@@ -19,10 +24,18 @@ export default function index() {
         }}
       ></motion.div>
       <div className="buttons font-text">
-        <div className="button">cover</div>
-        <div className="button">about</div>
-        <div className="button">showroom</div>
-        <div className="button">contact</div>
+        <Link href={"#hero"}>
+          <div className="button">cover</div>
+        </Link>
+        <Link href={"#about"}>
+          <div className="button">about</div>
+        </Link>
+        <Link href={"#showroom"}>
+          <div className="button">showroom</div>
+        </Link>
+        <Link href={"#contact"}>
+          <div className="button">contact</div>
+        </Link>
       </div>
     </div>
   );
