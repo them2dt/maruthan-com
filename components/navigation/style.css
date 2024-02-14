@@ -62,7 +62,6 @@
     #navigation {
 
         position: fixed;
-        position: -webkit-sticky;
         bottom: 20px;
         left: 10vw;
 
