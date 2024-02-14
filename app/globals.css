@@ -18,10 +18,10 @@
 }
 
 [data-theme="grey"] {
-  --black: #ff7b7b;
+  --black: #ffafaf;
   --white: #888888;
-  --pencil: #808080;
-  --accent: #4b4b4b;
+  --pencil: #777777;
+  --accent: #666666;
 }
 
 [data-theme="dark"] {
@@ -71,6 +71,8 @@ body {
 
   background-color: var(--white);
   color: var(--black);
+
+  overflow-x: hidden;
 }
 
 a {
@@ -92,6 +94,8 @@ a:hover {
 
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+
 }
 
 .font-title {
