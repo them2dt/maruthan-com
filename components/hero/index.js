@@ -7,7 +7,7 @@ export default function Index({ toggleMode }) {
   return (
     <motion.div className="hero fps" id="hero">
       <motion.div className="hero-title font-title">
-        Maruthan
+        Maruthan Thanabalasingam
       </motion.div>
       <motion.div className="hero-description font-text">
         WEB - MOBILE - BLOCKCHAIN

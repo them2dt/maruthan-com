@@ -26,7 +26,7 @@ export default function Index() {
   });
 
   return (
-    <motion.div className="showroom fps" id="showroom" >
+    <motion.div className="showroom fps" id="showroom" ref={sportingRef}>
       <motion.div className="column left">
         <motion.div className="block block-1">
           <motion.div className="phone-container">
@@ -54,7 +54,7 @@ export default function Index() {
           </motion.div>
         </motion.div>
       </motion.div>
-      <motion.div className="column right" ref={sportingRef}>
+      <motion.div className="column right">
         <motion.div className="block block-2">
           <motion.div className="content">
             <motion.div className="font-h3">Sporting Labs</motion.div>

@@ -1,5 +1,6 @@
 import "./globals.css";
 
+
 export const metadata = {
   title: "MARUTHAN.",
   description: "WEB - MOBILE - BLOCKCHAIN.",
@@ -24,7 +25,6 @@ export const metadata = {
     images: ["https://bafkreih5wyrydfkusimvtutrk7hopqiejj73n7w4tjcovz6jipkj5tju4y.ipfs.nftstorage.link/"],
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (
