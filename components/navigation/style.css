@@ -1,0 +1,56 @@
+#navigation {
+
+    position: fixed;
+    position: -webkit-sticky;
+    bottom: 20px;
+    left: 20px;
+
+    background-color: var(--white);
+    color: var(--black);
+    border: 2px solid var(--pencil);
+    border-radius: 100px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+#navigation .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    transform-origin: 0%;
+
+
+    width: 500px;
+    height: 80px;
+
+    background-color: var(--black);
+}
+
+#navigation .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    width: 500px;
+    height: 80px;
+
+}
+
+#navigation .buttons .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    mix-blend-mode: difference;
+
+}
+
+#navigation .buttons .button:hover {
+    color: var(--accent);
+}
