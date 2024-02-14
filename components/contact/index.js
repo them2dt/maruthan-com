@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 
-export default function index() {
+export default function Index() {
   return (
     <div className="fps" id="contact">
       <Link href={"https://github.com"} target="_blank">

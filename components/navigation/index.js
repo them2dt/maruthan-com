@@ -8,7 +8,7 @@ import {
 import "./style.css";
 import Link from "next/link";
 
-export default function index() {
+export default function Index() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 1000,

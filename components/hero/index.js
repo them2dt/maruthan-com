@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import "./style.css";
 
-export default function index({ toggleMode }) {
+export default function Index({ toggleMode }) {
   return (
     <motion.div className="hero fps" id="hero">
       <motion.div className="hero-title font-title">
