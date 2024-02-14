@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   //0 = light mode , 1 = dark mode
   const [mode, setMode] = useState(0);
-  const styles = ["light", "dark", "ivy", "blueprint"];
+  const styles = ["light", "grey", "dark","blueprint"];
 
   const toggleMode = () => {
     if (mode == 0) {

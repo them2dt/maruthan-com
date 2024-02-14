@@ -1,14 +1,32 @@
 import React, { useRef, useState } from "react";
-
 import "./style.css";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 export default function index() {
   const [activeFrame, setActiveFrame] = useState(0);
 
+  const sportingRef = useRef();
+  const { scrollYProgress } = useScroll({ target: sportingRef });
+
+  const sportingFadeAway = useTransform(scrollYProgress, [0, 0.2], [1, 1]);
+  const keymountFadeAway = useTransform(scrollYProgress, [0.2, 0.6], [0, 1]);
+  const distriFadeAway = useTransform(scrollYProgress, [0.6, 1], [0, 1]);
+
+  useMotionValueEvent(scrollYProgress, "change", () => {
+    console.log("1: " + sportingFadeAway.get());
+    console.log("2: " + keymountFadeAway.get());
+    console.log("3: " + distriFadeAway.get());
+  });
+
   return (
-    <motion.div className="showroom fps" id="showroom">
+    <motion.div className="showroom fps" id="showroom" ref={sportingRef}>
       <motion.div className="column left">
         <motion.div className="block block-1">
           <motion.div className="phone-container">
@@ -28,9 +46,9 @@ export default function index() {
             </motion.div>
             <motion.div className="phone">
               <motion.div className="display">
-                <motion.div className={"frame frame-1"}></motion.div>
-                <motion.div className={"frame frame-2"}></motion.div>
-                <motion.div className={"frame frame-3"}></motion.div>
+                <motion.div className={"frame frame-1"} style={{ opacity: sportingFadeAway }}></motion.div>
+                <motion.div className={"frame frame-2"} style={{ opacity: keymountFadeAway }}></motion.div>
+                <motion.div className={"frame frame-3"} style={{ opacity: distriFadeAway }}></motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -119,9 +137,6 @@ export default function index() {
               This app is a solo project, and is still in development.
               <br />
               <br />
-              <Link href={"https://distridoc.emptea.xyz"} target="_blank">
-                Open app
-              </Link>
               <br />
               <Link
                 href={"https://github.com/emptea-xyz/distridoc"}

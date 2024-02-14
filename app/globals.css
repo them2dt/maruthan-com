@@ -17,6 +17,13 @@
   --accent: #ff5100;
 }
 
+[data-theme="grey"] {
+  --black: #ff7b7b;
+  --white: #888888;
+  --pencil: #808080;
+  --accent: #4b4b4b;
+}
+
 [data-theme="dark"] {
   --black: #ffffff;
   --white: #000000;

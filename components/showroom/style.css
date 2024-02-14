@@ -145,14 +145,21 @@
 
 #showroom .column .block-1 .phone .display .frame-1 {
     background-color: red;
+    background-image: url("../../media/sportinglabs.png");
+    background-size: contain;
 }
 
 #showroom .column .block-1 .phone .display .frame-2 {
     background-color: green;
+    background-image: url("../../media/keymount.png");
+    background-size: contain;
 }
 
 #showroom .column .block-1 .phone .display .frame-3 {
     background-color: blue;
+    
+    background-image: url("../../media/distridoc.png");
+    background-size: contain;
 }
 
 #showroom .column .block-2 {
