@@ -24,9 +24,6 @@ export default function Index() {
         }}
       ></motion.div>
       <div className="buttons font-text">
-        <Link href={"#hero"}>
-          <div className="button">cover</div>
-        </Link>
         <Link href={"#about"}>
           <div className="button">about</div>
         </Link>

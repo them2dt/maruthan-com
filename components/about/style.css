@@ -1,112 +1,245 @@
-#about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (min-width:780px) {
+
+
+    #about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about .phone-box .phone-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about .phone-box .phone-button {
+        position: relative;
+        left: 100px;
+        width: 100px;
+        height: 10px;
+        background-color: var(--white);
+
+        border: 2px solid var(--black);
+        border-bottom: 0px solid var(--black);
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+
+
+        cursor: pointer;
+
+    }
+
+    #about .phone-box .phone-button:hover {
+        top: 1px;
+    }
+
+    #about .phone-box .phone-button:active {
+        top: 2px;
+    }
+
+    #about .phone-box .phone-body {
+        position: relative;
+        width: 1000px;
+        height: 400px;
+
+        background-color: var(--white);
+        border: 2px solid var(--black);
+        border-radius: 80px;
+    }
+
+    #about .phone-box .phone-display {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 960px;
+        height: 360px;
+
+        background-color: var(--white);
+        border: 2px solid var(--black);
+
+        border-radius: 60px;
+        overflow: hidden;
+
+    }
+
+    #about .phone-box .phone-display .phone-text {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 800px;
+        height: 340px;
+
+        overflow: scroll;
+
+
+        padding-top: 20px;
+        padding-left: 30px;
+
+        color: var(--black);
+    }
+
+    #about .phone-box .phone-display .phone-text span {
+        color: var(--accent);
+    }
+
+    #about .phone-box .phone-display .phone-dark-mode {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        width: 960px;
+        background-color: rgb(255, 255, 255);
+        mix-blend-mode: difference;
+        z-index: 30;
+
+        box-sizing: border-box;
+
+        pointer-events: none;
+
+        transition-duration: 0.2s;
+    }
+
+    #about .phone-box .phone-display .phone-light-mode {
+        position: absolute;
+        top: 0;
+        left: -960px;
+        bottom: 0;
+
+        width: 960px;
+        background-color: rgb(255, 255, 255);
+        mix-blend-mode: difference;
+        z-index: 30;
+
+        pointer-events: none;
+
+        transition-duration: 0.2s;
+    }
 }
 
-#about .phone-box .phone-button {
-    position: relative;
-    left: 100px;
-    width: 100px;
-    height: 10px;
-    background-color: var(--white);
+@media only screen and (max-width:780px) {
 
-    border: 2px solid var(--black);
-    border-bottom: 0px solid var(--black);
-    border-radius: 10px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    #about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
+    #about .phone-box .phone-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-    cursor: pointer;
+    #about .phone-box .phone-button {
+        position: relative;
+        left: 100px;
+        width: 100px;
+        height: 10px;
+        background-color: var(--white);
 
-}
-
-#about .phone-box .phone-button:hover {
-    top: 1px;
-}
-
-#about .phone-box .phone-button:active {
-    top: 2px;
-}
-
-#about .phone-box .phone-body {
-    position: relative;
-    width: 1000px;
-    height: 400px;
-
-    background-color: var(--white);
-    border: 2px solid var(--black);
-    border-radius: 80px;
-}
-
-#about .phone-box .phone-display {
-    position: relative;
-    top: 20px;
-    left: 20px;
-    width: 960px;
-    height: 360px;
-
-    background-color: var(--white);
-    border: 2px solid var(--black);
-
-    border-radius: 60px;
-    overflow: hidden;
-
-}
-
-#about .phone-box .phone-display .phone-text {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 800px;
-    height: 340px;
-
-    overflow: scroll;
+        border: 2px solid var(--black);
+        border-bottom: 0px solid var(--black);
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
 
 
-    padding-top: 20px;
-    padding-left: 30px;
+        cursor: pointer;
 
-    color: var(--black);
-}
+    }
 
-#about .phone-box .phone-display .phone-text span {
-    color: var(--accent);
-}
+    #about .phone-box .phone-button:hover {
+        top: 1px;
+    }
 
-#about .phone-box .phone-display .phone-dark-mode {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    #about .phone-box .phone-button:active {
+        top: 2px;
+    }
 
-    width: 960px;
-    background-color: rgb(255, 255, 255);
-    mix-blend-mode: difference;
-    z-index: 30;
+    #about .phone-box .phone-body {
+        position: relative;
+        width: 300px;
+        height: 600px;
 
-    box-sizing: border-box;
+        background-color: var(--white);
+        border: 2px solid var(--black);
+        border-radius: 40px;
+    }
 
-    pointer-events: none;
+    #about .phone-box .phone-display {
+        position: relative;
+        top: 8px;
+        left: 8px;
+        width: 280px;
+        height: 580px;
 
-    transition-duration: 0.2s;
-}
+        background-color: var(--white);
+        border: 2px solid var(--black);
 
-#about .phone-box .phone-display .phone-light-mode {
-    position: absolute;
-    top: 0;
-    left: -960px;
-    bottom: 0;
+        border-radius: 30px;
+        overflow: hidden;
 
-    width: 960px;
-    background-color: rgb(255, 255, 255);
-    mix-blend-mode: difference;
-    z-index: 30;
+    }
 
-    pointer-events: none;
+    #about .phone-box .phone-display .phone-text {
+        position: absolute;
 
-    transition-duration: 0.2s;
+        top: 0;
+        left: 0;
+
+        width: 260px;
+        height: 580px;
+
+        overflow: scroll;
+
+
+        padding-top: 10px;
+        padding-left: 10px;
+
+        font-size: 24px;
+        color: var(--black);
+    }
+
+    #about .phone-box .phone-display .phone-text span {
+        color: var(--accent);
+    }
+
+    #about .phone-box .phone-display .phone-dark-mode {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        width:280px;
+        background-color: rgb(255, 255, 255);
+        mix-blend-mode: difference;
+        z-index: 30;
+
+        box-sizing: border-box;
+
+        pointer-events: none;
+
+        transition-duration: 0.2s;
+    }
+
+    #about .phone-box .phone-display .phone-light-mode {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        bottom: 0;
+
+        width: 280px;
+        background-color: rgb(255, 255, 255);
+        mix-blend-mode: difference;
+        z-index: 30;
+
+        pointer-events: none;
+
+        transition-duration: 0.2s;
+    }
 }
