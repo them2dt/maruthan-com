@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import "./style.css";
 
-export default function index() {
+export default function Index() {
   const [darkMode, setDarkMode] = useState(false);
   const toggleDarkMode = () => {
     if (darkMode == true) {
@@ -25,7 +25,7 @@ export default function index() {
               Hello stranger.
               <br />
               <br />
-              I'm Maru. I build software and more. I started over 6 years ago
+              I&#39;m Maru. I build software and more. I started over 6 years ago
               with <span>Java</span>, which in hindsight was a rather unusual
               choice for beginners. I continued to travel into other spaces as{" "}
               <span>Python</span>, <span>SQL</span>
@@ -40,10 +40,10 @@ export default function index() {
               <span>React.js</span>. Since then, I have consistently broadened
               my horizons, learning to utilize libraries such as{" "}
               <span>framer-motion</span>, <span>material-ui</span>, and{" "}
-              <span>Next.js</span>. There's something new to learn, everyday.
+              <span>Next.js</span>. There&#39;s something new to learn, everyday.
               <br />
               <br />
-              In late august 2022, during a period of Bitcoin's decline, i
+              In late august 2022, during a period of Bitcoin&#39;s decline, i
               decided to go deeper into the blockchain technology. On August
               29th, i bought a course to learn{" "}
               <span>Smart contract development</span> for 13$. It was probably

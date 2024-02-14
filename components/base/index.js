@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export default function index() {
+export default function Index() {
   return (
     <div id="base">
       <div className="horizontal">

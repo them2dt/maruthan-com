@@ -9,7 +9,7 @@ import {
   useTransform,
 } from "framer-motion";
 
-export default function index() {
+export default function Index() {
   const [activeFrame, setActiveFrame] = useState(0);
 
   const sportingRef = useRef();
@@ -66,7 +66,7 @@ export default function index() {
               sport they love.
               <br />
               <br />
-              Sporting Labs got 2'800 downloads and won two hackathons.
+              Sporting Labs got 2&#39;800 downloads and won two hackathons.
               <br />
               <br />
               The app was planned to be redesigned for a better experience (look
