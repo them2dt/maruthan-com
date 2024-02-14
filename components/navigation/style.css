@@ -62,12 +62,11 @@
     #navigation {
 
         position: fixed;
-        bottom: 20px;
-        left: 10vw;
+        bottom: 0;
+        left: 0;
 
         background-color: var(--white);
         color: var(--black);
-        border: 2px solid var(--pencil);
         overflow: hidden;
         z-index: 1000;
     }
@@ -81,7 +80,7 @@
         transform-origin: 0%;
 
 
-        width: 80vw;
+        width: 100vw;
         height: 80px;
 
         background-color: var(--black);
@@ -91,10 +90,10 @@
     #navigation .buttons {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 20px;
 
-        width: 80vw;
+        width: 100vw;
         height: 80px;
 
     }
@@ -104,10 +103,12 @@
         align-items: center;
         justify-content: center;
 
+
         cursor: pointer;
         z-index: 1;
         color: white;
         mix-blend-mode: difference;
+        font-size: 18px;
 
     }
 
