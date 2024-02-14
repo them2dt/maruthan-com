@@ -68,7 +68,6 @@
         background-color: var(--white);
         color: var(--black);
         border: 2px solid var(--pencil);
-        border-radius: 100px;
         overflow: hidden;
         z-index: 1000;
     }
@@ -86,13 +85,14 @@
         height: 80px;
 
         background-color: var(--black);
+
     }
 
     #navigation .buttons {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 20px;
 
         width: 80vw;
         height: 80px;
