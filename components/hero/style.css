@@ -106,6 +106,10 @@
         border-radius: 250px;
 
         pointer-events: none;
+
+        font-family: "JB";
+        font-size: 24px;
+        color: var(--pencil);
     }
 }
 
@@ -212,5 +216,10 @@
         border-radius: 250px;
 
         pointer-events: none;
+
+        
+        font-family: "JB";
+        font-size: 18px;
+        color: var(--pencil);
     }
 }

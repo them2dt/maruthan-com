@@ -3,6 +3,11 @@
   src: url(./Satoshi-Variable.ttf);
 }
 
+@font-face {
+  font-family: "JB";
+  src: url(./JetBrainsMono-Medium.ttf);
+}
+
 :root {
   --black: #000000;
   --white: #ffffff;

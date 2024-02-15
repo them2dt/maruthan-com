@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-} from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 import "./style.css";
 import Link from "next/link";
@@ -24,9 +20,6 @@ export default function Index() {
         }}
       ></motion.div>
       <div className="buttons font-text">
-        <Link href={"#hero"}>
-          <div className="button">cover</div>
-        </Link>
         <Link href={"#about"}>
           <div className="button">about</div>
         </Link>

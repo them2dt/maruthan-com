@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import "./style.css";
 
 export default function Index({ toggleMode }) {
+  const [legend, setLegend] = useState("click here!");
+
   return (
     <motion.div className="hero fps" id="hero">
       <motion.div className="hero-title font-title">
@@ -15,7 +17,10 @@ export default function Index({ toggleMode }) {
 
       <motion.div className="hero-graphic-container">
         <motion.div className="hero-graphic">
-          <motion.div className="drill" onClick={toggleMode}>
+          <motion.div
+            className="drill"
+            onClick={toggleMode}
+          >
             <motion.div></motion.div>
             <motion.div></motion.div>
 
@@ -94,8 +99,7 @@ export default function Index({ toggleMode }) {
             <motion.div></motion.div>
             <motion.div></motion.div>
           </motion.div>
-          <motion.div className="hole"></motion.div>
-          <motion.div className="rotator"></motion.div>
+          <motion.div className="hole">{legend}</motion.div>
         </motion.div>
       </motion.div>
     </motion.div>
