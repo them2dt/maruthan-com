@@ -54,7 +54,7 @@ export default function Index() {
               <br />
               In December 2022, I co-founded Sporting Labs and achieved notable
               success by winning <span>two hackathons</span> between January and
-              April 2023, earning a total prize money of $18,000.
+              April 2023.
               <br />
               <br />
               Fast forward to summer 2023, i joined the{" "}
