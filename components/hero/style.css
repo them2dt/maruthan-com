@@ -1,25 +1,28 @@
 @media only screen and (min-width:780px) {
 
-    #hero .hero-title {
-        position: absolute;
-        top: 25vh;
-        left: 12.5vw;
-        width: 39vw;
-        height: 170px;
+    #hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+    }
 
+    #hero .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #hero .hero-title {
         margin: 0;
         padding: 0;
 
         color: var(--black);
+        font-size: 72px;
     }
 
     #hero .hero-description {
-        position: absolute;
-        top: calc(25vh + 160px);
-        left: calc(12.5vw + 20px);
-        width: 26vw;
-        height: 70px;
-
         margin: 0;
         padding: 0;
 
@@ -27,12 +30,8 @@
     }
 
     #hero .hero-graphic-container {
-        position: absolute;
-        top: 25vh;
-        right: 12.5vw;
 
-        width: 25vw;
-        height: 50vh;
+
 
         display: flex;
         align-items: center;
@@ -41,8 +40,8 @@
 
     #hero .hero-graphic {
         position: relative;
-        height: 400px;
-        width: 400px;
+        height: 200px;
+        width: 200px;
     }
 
     #hero .hero-graphic .drill {
@@ -50,8 +49,8 @@
         top: 0;
         left: 0;
 
-        height: 400px;
-        width: 400px;
+        height: 200px;
+        width: 200px;
         overflow: hidden;
 
         display: flex;
@@ -90,11 +89,11 @@
 
     #hero .hero-graphic .hole {
         position: absolute;
-        top: 50px;
-        left: 50px;
+        top: 20px;
+        left: 20px;
 
-        height: 300px;
-        width: 300px;
+        height: 160px;
+        width: 160px;
         overflow: hidden;
 
         display: flex;
@@ -108,7 +107,7 @@
         pointer-events: none;
 
         font-family: "JB";
-        font-size: 24px;
+        font-size: 18px;
         color: var(--pencil);
     }
 }
@@ -217,7 +216,7 @@
 
         pointer-events: none;
 
-        
+
         font-family: "JB";
         font-size: 18px;
         color: var(--pencil);

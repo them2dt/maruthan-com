@@ -36,8 +36,6 @@
         align-items: flex-start;
         justify-content: center;
 
-        margin-top: 100px;
-        margin-bottom: 100px;
 
         gap: 20px;
 
@@ -51,7 +49,6 @@
 
     #showroom .column .block .content .font-text {
         font-size: 36px;
-        line-height: 110%;
 
         color: var(--black);
     }
@@ -73,6 +70,9 @@
 
         width: 400px;
         height: 700px;
+
+        max-height: 80vh;
+        max-width: 40vh;
 
         background-color: var(--white);
         border: 2px solid var(--black);
@@ -121,6 +121,10 @@
 
         width: calc(400px - 40px);
         height: calc(700px - 40px);
+
+
+        max-height: calc(80vh - 40px);
+        max-width: calc(40vh - 40px);
 
         background-color: var(--white);
         border: 2px solid var(--black);

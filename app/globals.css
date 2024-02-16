@@ -52,14 +52,13 @@
 
 * {
   -ms-overflow-style: none;
-  /* Internet Explorer 10+ */
   scrollbar-width: none;
-  /* Firefox */
+
+  letter-spacing: -0.05em;
 }
 
 *::-webkit-scrollbar {
   display: none;
-  /* Safari and Chrome */
 }
 
 html {
@@ -82,7 +81,6 @@ a {
 
   text-decoration: none;
   color: var(--accent);
-  line-height: 140%;
 }
 
 a:hover {
@@ -103,54 +101,40 @@ a:hover {
   font-family: "satoshi";
   font-size: 96px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(75%);
 }
 
 .font-h1 {
   font-family: "satoshi";
   font-size: 72px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(75%);
 }
 
 .font-h2 {
   font-family: "satoshi";
   font-size: 64px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(75%);
 }
 
 .font-h3 {
   font-family: "satoshi";
   font-size: 56px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(75%);
 }
 
 .font-h4 {
   font-family: "satoshi";
   font-size: 48px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(75%);
 }
 
 .font-text {
   font-family: "satoshi";
   font-size: 24px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(75%);
 }
 
 .font-text-2 {
   font-family: "satoshi";
   font-size: 48px;
   font-weight: 1000;
-  letter-spacing: -0.05em;
-  line-height: calc(120%);
 }
