@@ -4,7 +4,6 @@ import Base from "../components/base";
 import Hero from "../components/hero";
 import About from "../components/about";
 import Showroom from "../components/showroom";
-import Skills from "../components/skills";
 import Contact from "../components/contact";
 
 import { useState } from "react";
